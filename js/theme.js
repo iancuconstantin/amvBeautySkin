@@ -179,24 +179,31 @@
             loop: false,
             nav: false,
             dots: false,
-            items: 5,
-            responsiveClass:true,
-            responsive:{
-                0:{
+            items: 7,
+            responsiveClass: true,
+            responsive: {
+                0: {
                     items: 1
                 },
-                768:{
+                576: {
+                    items: 2
+                },
+                768: {
                     items: 3
                 },
-                1023:{
-                    items: 4
-                },
-                1200:{
+                1024: {
                     items: 5
+                },
+                1280: {
+                    items: 6
+                },
+                1440: {
+                    items: 7
                 }
             }
         });
     }
+    
     /*-- Testimonail Slider --*/
     if (tw_testiSlider.length > 0) {
         tw_testiSlider.slick({

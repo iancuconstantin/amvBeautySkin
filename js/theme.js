@@ -176,10 +176,13 @@
     if(clientSlider.length > 0){
         var clientSlider_obj = clientSlider.owlCarousel({
             margin: 30,
-            loop: false,
+            loop: true,
             nav: false,
             dots: false,
             items: 7,
+            autoplay: true,
+            autoplayTimeout: 2500,
+            autoplaySpeed: 1000,
             responsiveClass: true,
             responsive: {
                 0: {

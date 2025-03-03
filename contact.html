@@ -152,17 +152,19 @@
                 <div style="display: flex; justify-content:space-evenly;">
                     <img src="images/map.png" alt="google map location" style="height: 500px; width: auto;">
                 </div>
-                    <div style="display: flex; justify-content: center;">
+                    <div style="display: flex; justify-content: center; padding-top: 25px;">
                         <!-- Buton Google Maps -->
-                        <div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="images/icons/map.png" alt="google map icon" style="height: 50px; width: auto;">
                             <a href="https://www.google.com/maps?q=AMV BEAUTY SKIN, Strada Pescarilor 30, Năvodari 905700" target="_blank">
-                                <button class="mo_btn mob_lg">Deschide în Google Maps</button>
+                                <button class="mo_btn mob_lg" onclick="openGoogleMaps()"><i class="icofont-location-pin"></i>Deschide Google Maps</button>
                             </a>
                         </div>
                         <!-- Buton Waze -->
-                        <div>
+                        <div style="display: flex; flex-direction: column; align-items: center;">
+                            <img src="images/icons/waze.png" alt="waze icon" style="height: 50px; width: auto;">
                             <a href="https://waze.com/ul?q=AMV BEAUTY SKIN, Strada Pescarilor 30, Năvodari 905700" target="_blank">
-                                <button class="mo_btn mob_lg">Deschide în Waze</button>
+                                <button class="mo_btn mob_lg" onclick="openWaze()"><i class="icofont-location-pin"></i>Deschide Waze</button>
                             </a>
                         </div>
                     </div>
@@ -338,6 +340,23 @@
         <!-- Bact To Top -->
         <a href="javascript:void(0);" id="backtotop"><i class="icofont-bubble-up"></i></a>
         <!-- Bact To Top -->
+
+
+        <script>
+            function openGoogleMaps() {
+                const destination = encodeURIComponent("AMV BEAUTY SKIN, Strada Pescarilor 30, Năvodari 905700");
+                const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
+                window.open(url, "_blank");
+            }
+            function openWaze() {
+                const destination = encodeURIComponent("AMV BEAUTY SKIN, Strada Pescarilor 30, Năvodari 905700");
+                const wazeWebUrl = `https://www.waze.com/ul?query=${destination}&navigate=yes`;
+
+                window.open(wazeWebUrl, "_blank"); // Deschide Waze în browser
+                
+            }
+        </script>
+
 
         <!-- Start Include All JS -->
         <script src="js/jquery.js"></script>

@@ -32,7 +32,7 @@
 .serviceSection .l_01{
     left: auto;
     right: 0;
-    top: -8%;
+    top: -2%;
 }
 .serviceSection .l_02{
     top: auto;
@@ -256,6 +256,7 @@
     line-height: 58px;
     font-weight: 700;
     margin: 0 0 11px;
+    text-align: center;
 }
 .abHistory img{
     max-width: 100%;
@@ -443,5 +444,36 @@
     }
     .featureSection .abContent{
         padding-right: 0;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1600px){
+    .abHistory h2{
+        font-size: 48px;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1360px){
+    .abHistory h2{
+        font-size: 32px;
+    }
+}
+@media (max-width: 1023px){
+    .abHistory h2{
+        font-size: 32px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .abHistory h2{
+        font-size: 12px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px){
+    .abHistory h2{
+        font-size: 32px;
+    }
+}
+@media (max-width: 767px){
+    .abHistory h2{
+        font-size: 48px;
     }
 }

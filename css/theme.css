@@ -375,6 +375,7 @@
     content: '';
     background: url(../images/home_01/after.png) no-repeat center bottom;
     z-index: 1;
+    pointer-events: none;
 }
 .round_anim{
     width: 800px;
@@ -1081,7 +1082,8 @@ textarea{
     width: 100%;
     overflow: hidden;
     display: flex;
-    justify-content: space-around;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
 }
 .my_instagram a {
     position: relative;

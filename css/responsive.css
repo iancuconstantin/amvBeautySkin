@@ -54,8 +54,8 @@
     .slider_01 .tp-caption.cusLayer img{
         width: 600px !important;
         height: auto !important;
-        top: -50px;
-        right: 200px;
+        top: 120px;
+        right: 10px;
         position: relative;
     }
     .round_anim{

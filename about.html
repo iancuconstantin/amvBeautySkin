@@ -34,6 +34,42 @@
         <!-- Favicon Icon -->
         <link rel="icon"  type="image/png" href="images/favicon.png">
         <!-- Favicon Icon -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+        <style>
+            .bibliografie {
+                max-width: 600px;
+                background: #fff;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+            .section-title {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+            }
+            .section-title i {
+                margin-right: 10px;
+                color: #e67e22;
+            }
+            .list {
+                list-style: none;
+                padding: 0;
+            }
+            .list li {
+                margin: 5px 0;
+                display: flex;
+                align-items: center;
+            }
+            .list i {
+                margin-right: 8px;
+                color: #2c3e50;
+            }
+        </style>
     </head>
     <body>
         <!-- Preloading -->
@@ -63,7 +99,17 @@
                             <ul>
                                 <li><a href="index.html">Acasa</a></li>
                                 <li class="current-menu-item"><a href="about.html">Despre</a></li>
-                                <li><a href="package.html">Servicii</a></li>
+                                <li class="menu-item-has-children">
+                                    <a href="javascript:void(0);">Servicii</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="package.html#pachete">Terapie LIPOSONIX</a></li>
+                                        <li><a href="package.html#estetica_faciala">Estetică Facială</a></li>
+                                        <li><a href="package.html#estetica_corporala">Estetică Corporală</a></li>
+                                        <li><a href="package.html#epilare_definitiva">Epilare Definitivă</a></li>
+                                        <li><a href="package.html#cosmetica">Cosmetică/ Îngrijire personală</a></li>
+                                        <li><a href="package.html#makeup">Make-Up</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="blog5.html">Blog</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
@@ -116,10 +162,9 @@
                             </a></p>
                         </div>
                         <div class="social_item">
-                            <a href="https://www.facebook.com/"><i class="icofont-facebook"></i></a>
-                            <a href="https://twitter.com/"><i class="icofont-twitter"></i></a>
-                            <a href="https://bebo.com/"><i class="icofont-bebo"></i></a>
-                            <a href="https://dribbble.com/"><i class="icofont-dribbble"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/p/AMV_Beauty-Skin-100092994287550/"><i class="icofont-facebook"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/amv_beauty_skin/"><img src="/images/svg/instagram.svg" alt="instagram icon" width="15" height="15"></a>
+                            <a target="_blank" href="https://www.tiktok.com/@amv_beauty_skin"><img src="/images/svg/tiktok.svg" alt="tiktok icon" width="15" height="15"></a>
                         </div>
                     </div>
                 </div>
@@ -187,36 +232,6 @@
         </section>
         <!-- End:: About Section -->
 
-        <!-- Begin:: History Section -->
-        <!-- <section class="commonSection historySection">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4 clearfix">
-                        <div class="abHistory">
-                            <h2>1985</h2>
-                            <img src="images/about/3.png" alt="Makeover"/>
-                            <p>In the tumultuous business of cutting-in and atten-ding to a whale, there is much running backwards and forwards among the crew.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 clearfix">
-                        <div class="abHistory">
-                            <h2>Today</h2>
-                            <img src="images/about/3.png" alt="Makeover"/>
-                            <p>In the tumultuous business of cutting-in and atten-ding to a whale, there is much running backwards and forwards among the crew.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 clearfix">
-                        <div class="abHistory">
-                            <h2>Feature</h2>
-                            <img src="images/about/3.png" alt="Makeover"/>
-                            <p>In the tumultuous business of cutting-in and atten-ding to a whale, there is much running backwards and forwards among the crew.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- End:: History Section -->
-
         <!-- Begin:: Feature Section -->
         <div class="commonSection featureSection2 hasBeforeDecoration hasAfterDecoration">
             <div class="layer_img l_01 move_anim">
@@ -224,123 +239,48 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-10 offset-lg-1">
-                        <!-- <div class="sectionTitle text-center">
-                            <img src="images/icons/4.png" alt=""/>
-                            <h5 class="primaryFont">Welcome</h5>
-                            <h2>Our <span class="colorPrimary fontWeight400">Feature</span></h2>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                Quis ipsum suspendisse ultrices gravida. Risus commodo viverra<br/> maecenas accumsan lacus vel facilisis. 
-                            </p>
-                        </div> -->
-                    </div>
-                </div>
-                <!-- <div class="row">
-                    <div class="col-lg-6">
-                        <div class="featureImg">
-                            <img src="images/about/4.png" alt=""/>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="icon_box_02">
-                            <div class="ib_box">
-                                <svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="167.000000pt" height="147.000000pt" viewBox="0 0 167.000000 147.000000" preserveAspectRatio="xMidYMid meet">
-                                   <g transform="translate(0.000000,147.000000) scale(0.050000,-0.050000)" fill="#252525" stroke="none">
-                                   <path d="M1257 2920 c-50 -9 -109 -25 -130 -35 -20 -11 -95 -25 -165 -31 -523
-                                   -45 -900 -630 -953 -1477 -43 -680 253 -1056 996 -1266 720 -204 1195 -98
-                                   1691 377 805 772 854 1763 105 2149 -412 213 -1153 349 -1544 283z"></path>
-                                   </g>
-                                </svg>
-                                <div class="bg_icon"><i class="mkov-foot-massage"></i></div>
-                                <i class="mkov-foot-massage"></i>
-                            </div>
-                            <h3>Matt Effects</h3>
-                            <p>Vivamus nec ligula et leo sodales pellentesque id sed lectus. Aliquam viverra velit sagittis pharetra venenatis</p>
-                        </div>
-                        <div class="icon_box_02 fib_02">
-                            <div class="ib_box">
-                                <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                                    width="167.000000pt" height="147.000000pt" viewBox="0 0 167.000000 147.000000"
-                                    preserveAspectRatio="xMidYMid meet">
-                                   <g transform="translate(0.000000,147.000000) scale(0.050000,-0.050000)"
-                                   fill="#252525" stroke="none">
-                                   <path d="M1572 2919 c-708 -80 -1193 -291 -1416 -614 -534 -777 474 -2293
-                                   1524 -2292 887 1 1576 436 1644 1037 101 889 -356 1757 -949 1804 -69 5 -160
-                                   22 -202 38 -98 37 -396 51 -601 27z"/>
-                                   </g>
-                                </svg>
-                                <div class="bg_icon"><i class="mkov-Yoga"></i></div>
-                                <i class="mkov-Yoga"></i>
-                            </div>
-                            <h3>Relax Zones</h3>
-                            <p>Vivamus nec ligula et leo sodales pellentesque id sed lectus. Aliquam viverra velit sagittis pharetra venenatis</p>
-                        </div>
-                        <div class="icon_box_02">
-                            <div class="ib_box">
-                                <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
-                                    width="175.000000pt" height="152.000000pt" viewBox="0 0 175.000000 152.000000"
-                                    preserveAspectRatio="xMidYMid meet">
-                                   <g transform="translate(0.000000,152.000000) scale(0.050000,-0.050000)"
-                                   fill="#252525" stroke="none">
-                                   <path d="M1115 2973 c-533 -182 -1118 -1037 -1091 -1597 31 -647 948 -1379
-                                   1694 -1351 1127 43 2049 1058 1675 1845 -197 414 -1177 1090 -1581 1090 -27 0
-                                   -102 14 -165 30 -170 44 -371 38 -532 -17z"/>
-                                   </g>
-                                </svg>
-                                <div class="bg_icon"><i class="mkov-shower"></i></div>
-                                <i class="mkov-shower"></i>
-                            </div>
-                            <h3>Hair Diration</h3>
-                            <p>Vivamus nec ligula et leo sodales pellentesque id sed lectus. Aliquam viverra velit sagittis pharetra venenatis</p>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="row">
                     <div class="col-lg-5 col-md-6">
                         <div class="team_thumb">
                             <img src="images/single_team/1.jpg" alt=""/>
                         </div>
-                        <!-- <div class="single_skill" data-parcent="75">
-                            <h4>Facewash</h4>
-                            <div class="ss_parent"><div class="ss_child"></div><h4>75%</h4></div>
-                        </div>
-                        <div class="single_skill" data-parcent="95">
-                            <h4>Spa</h4>
-                            <div class="ss_parent"><div class="ss_child"></div><h4>95%</h4></div>
-                        </div>
-                        <div class="single_skill" data-parcent="85">
-                            <h4>Hair Cut</h4>
-                            <div class="ss_parent"><div class="ss_child"></div><h4>85%</h4></div>
-                        </div>
-                        <div class="single_skill" data-parcent="98">
-                            <h4>Facial</h4>
-                            <div class="ss_parent"><div class="ss_child"></div><h4>98%</h4></div>
-                        </div> -->
                     </div>
                     <div class="col-lg-6 offset-lg-1 col-md-6">
                         <div class="team_content">
                             <span class="tm_designation">Founder / Manager</span>
                             <h4>Anne-Mary Vaduva</h4>
                             <div class="tm_social">
-                                <a href="https://www.facebook.com/"><i class="icofont-facebook"></i></a>
-                                <a href="https://envato.com/"><i class="icofont-envato"></i></a>
-                                <a href="https://twitter.com/"><i class="icofont-twitter"></i></a>
+                                <a target="_blank" href="https://www.facebook.com/p/AMV_Beauty-Skin-100092994287550/"><i class="icofont-facebook"></i></a>
+                                <a target="_blank" href="https://www.instagram.com/amv_beauty_skin/"><img src="/images/svg/instagram.svg" alt="instagram icon" width="15" height="15"></a>
+                                <a target="_blank" href="https://www.tiktok.com/@amv_beauty_skin"><img src="/images/svg/tiktok.svg" alt="tiktok icon" width="15" height="15"></a>
                             </div>
                             <ul class="tm_meta mb_103">
                                 <li><i class="icofont-calendar"></i><span>Experiență:</span> 18 +Years</li>
                                 <li><i class="icofont-headphone-alt"></i><span>Telefon:</span> <a href="tel:0727822852">0727 822 852</a></li>
                                 <li><i class="icofont-ui-email"></i><span>Email:</span> <a href="mailto:office@amvbeautyskin.ro">office@amvbeautyskin.ro</a></li>
                             </ul>
-                            <p> A absolvit studiile în domeniul beauty și esteticii, specializându-se în cosmetologie și mezoterapie cu microneedling, precum și în inducția de colagen, în cadrul Start Academy, promoția 2018. 
-                                De asemenea, și-a aprofundat cunoștințele în terapia antiaging, obținând un certificat în Germania, la Flein, în același an. 
-                                Parcursul său profesional a început cu formarea în cosmetică la Școala Postliceală Spiru Haret, unde a absolvit în promoția 2007, dobândind o bază solidă în îngrijirea pielii și tratamente faciale. 
-                            </p>
-                            <p> Activează ca Founder și Manager la AMV BEAUTY SKIN din 5 mai 2022, coordonând activitățile din domeniul dermato-cosmeticii și cosmeceuticii. 
-                                Cu o experiență vastă în estetică, își desfășoară activitatea ca Specialist în machiaj corector și Makeup Artist din 3 iunie 2007, oferind servicii personalizate de înfrumusețare. A susținut proiectul „Rolul machiajului corector” în iunie 2008, demonstrând importanța tehnicilor profesionale în estetica facială. 
-                                În octombrie 2017, a participat la evenimentul „Terapie after Cancer” organizat de ETRE BELLE ROMANIA, contribuind la promovarea îngrijirii pielii post-tratament. 
-
-                            </p>
+                            <div class="bibliografie">
+                                <div class="section-title">
+                                    <i class="fas fa-graduation-cap"></i> Formare și certificări
+                                </div>
+                                <ul class="list">
+                                    <li><i class="fas fa-certificate"></i> Absolventă a Start Academy (2018) – Specializare în cosmetologie, mezoterapie cu microneedling și inducția de colagen</li>
+                                    <li><i class="fas fa-certificate"></i> Certificat în terapia antiaging, Flein, Germania (2018)</li>
+                                    <li><i class="fas fa-certificate"></i> Absolventă a Școlii Postliceale Spiru Haret (2007) – Formare în cosmetică</li>
+                                </ul>
+                                
+                                <div class="section-title">
+                                    <i class="fas fa-briefcase"></i> Experiență profesională și activități
+                                </div>
+                                <ul class="list">
+                                    <li><i class="fas fa-building"></i> Founder & Manager la AMV BEAUTY SKIN (din 2022)</li>
+                                    <li><i class="fas fa-paint-brush"></i> Specialist în machiaj corector & Makeup Artist (din 2007)</li>
+                                    <li><i class="fas fa-lightbulb"></i> Proiect „Rolul machiajului corector” (2008)</li>
+                                    <li><i class="fas fa-hands-helping"></i> Participant la „Terapie after Cancer” – ETRE BELLE ROMANIA (2017)</li>
+                                    <li><i class="fas fa-industry"></i> Vizită fabrica ETRE BELLE COSMETICS</li>
+                                    <li><i class="fas fa-award"></i> Ambassador Yell of Youth (2021-2022)</li>
+                                    <li><i class="fas fa-chalkboard-teacher"></i> Participare la cursuri și seminarii pentru informare detaliată a serviciilor și recomandărilor</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -353,113 +293,10 @@
         <section class="commonSection testimonialSections">
             <div class="container">
                 <div class="elfsight-app-f8d4b50f-1e22-4d05-b0fd-153b6cd11d95" data-elfsight-app-lazy></div> 
-                <!-- <div class="row">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="singleTestimonial">
-                            <div class="quote2">
-                                <img src="images/home_01/quote.png" alt="">
-                                <span></span><span></span><span></span><span></span>
-                            </div>
-                            <p class="quatation2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <div class="autorDetails">
-                                <img src="images/home_01/t1.png" alt="">
-                                <span>Design Grue</span>
-                                <p>California, USA</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="singleTestimonial">
-                            <div class="quote2">
-                                <img src="images/home_01/quote.png" alt="">
-                                <span></span><span></span><span></span><span></span>
-                            </div>
-                            <p class="quatation2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <div class="autorDetails">
-                                <img src="images/home_01/t2.png" alt="">
-                                <span>Design Grue</span>
-                                <p>California, USA</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="singleTestimonial">
-                            <div class="quote2">
-                                <img src="images/home_01/quote.png" alt="">
-                                <span></span><span></span><span></span><span></span>
-                            </div>
-                            <p class="quatation2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <div class="autorDetails">
-                                <img src="images/home_01/t3.png" alt="">
-                                <span>Design Grue</span>
-                                <p>California, USA</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="singleTestimonial">
-                            <div class="quote2">
-                                <img src="images/home_01/quote.png" alt="">
-                                <span></span><span></span><span></span><span></span>
-                            </div>
-                            <p class="quatation2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <div class="autorDetails">
-                                <img src="images/home_01/t1.png" alt="">
-                                <span>Design Grue</span>
-                                <p>California, USA</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="singleTestimonial">
-                            <div class="quote2">
-                                <img src="images/home_01/quote.png" alt="">
-                                <span></span><span></span><span></span><span></span>
-                            </div>
-                            <p class="quatation2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <div class="autorDetails">
-                                <img src="images/home_01/t2.png" alt="">
-                                <span>Design Grue</span>
-                                <p>California, USA</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="singleTestimonial">
-                            <div class="quote2">
-                                <img src="images/home_01/quote.png" alt="">
-                                <span></span><span></span><span></span><span></span>
-                            </div>
-                            <p class="quatation2">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                            </p>
-                            <div class="autorDetails">
-                                <img src="images/home_01/t3.png" alt="">
-                                <span>Design Grue</span>
-                                <p>California, USA</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
         </section>
         <!-- End:: Testimonials Section -->
 
-
-
-        <!-- Begin:: Team Section -->
-        
-        <!-- End:: Team Section -->
         
         <!-- Begin:: Instagram Section -->
         <div class="my_instagram ovelay">
@@ -554,10 +391,9 @@
                     </div>
                     <div class="col-md-6">
                         <div class="copy_social">
-                            <a target="_blank" href="https://www.facebook.com/"><i class="icofont-facebook"></i></a>
-                            <a target="_blank" href="https://twitter.com/"><i class="icofont-twitter"></i></a>
-                            <a target="_blank" href="https://bebo.com/"><i class="icofont-bebo"></i></a>
-                            <a target="_blank" href="https://dribbble.com/"><i class="icofont-dribbble"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/p/AMV_Beauty-Skin-100092994287550/"><i class="icofont-facebook"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/amv_beauty_skin/"><img src="/images/svg/instagram.svg" alt="instagram icon" width="15" height="15"></a>
+                            <a target="_blank" href="https://www.tiktok.com/@amv_beauty_skin"><img src="/images/svg/tiktok.svg" alt="tiktok icon" width="15" height="15"></a>
                         </div>
                     </div>
                 </div>

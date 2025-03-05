@@ -1281,7 +1281,6 @@ footer .widget a{
 }
 footer .widget a:hover{
     color: #f7a392;
-    padding-left: 6px;
 }
 footer .widget ul{
     margin: 0;
@@ -1308,7 +1307,7 @@ footer .widget ul li a:hover{
     position: fixed;
     right: 12px;
     bottom: 70px;
-    z-index: 999;
+    z-index: 990;
     background: #75ca7f;
     border-radius: 50%;
     margin: 10px;
@@ -1356,6 +1355,13 @@ footer .widget ul li a:hover{
 .copy_social a:hover{
     background: #f7a392;
     color: #fff;
+}
+
+.copy_social a:hover img {
+    filter: invert(1);
+}
+.social_item a:hover img {
+    filter: invert(1);
 }
 
 /*--  Back To Top ---*/
@@ -2030,6 +2036,9 @@ body.menu_open{
 .tm_social a:hover{
     color: #fff;
 }
+.tm_social a:hover img{
+    filter: invert(1);
+}
 .team_01 p{
     font-size: 12px;
     color: #f7a392;
@@ -2278,6 +2287,9 @@ body.menu_open{
 }
 .copy_dark .copy_social a{
     color: #fff;
+}
+.copy_dark .copy_social img{
+    filter: invert(1);
 }
 footer .widget.mailchimp{
     position: relative;

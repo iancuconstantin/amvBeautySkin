@@ -8,7 +8,7 @@ fetch(PROXY)
     const parsedData = JSON.parse(data.contents);
     console.log(parsedData.items);
     if (parsedData.items) {
-        parsedData.items.forEach(item => {
+        parsedData.items.forEach((item,idx) => {
 
             // Formatează data
             const formattedDate = formatDate(item.published);
@@ -20,7 +20,7 @@ fetch(PROXY)
             // Adaugă HTML-ul pentru fiecare articol
             articleDiv.innerHTML = `
                 <div class="blog_item_03" id=${item.id};>
-                    <img src="images/blog/1.jpg" alt=""/>
+                    <img src="images/blog/${idx+1}.jpg" alt=""/>
                     <div class="bp_content">
                         <span>${formattedDate}</span>
                         <h3><a href="single-blog.html" onclick="setArticleId(event, '${item.id}')">${item.title}</a></h3>

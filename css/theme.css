@@ -355,8 +355,8 @@
     margin: auto;
     position: relative;
     right: 0;
-    top: 50%;
-    transform: translateY(-50%)
+    /* top: 50%; */
+    /* transform: translateY(-50%) */
 }
 
 /*-- Slider Section ---*/

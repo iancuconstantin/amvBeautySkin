@@ -46,7 +46,7 @@
     background: url(../images/bg/4.jpg) no-repeat fixed right bottom #fff6f4;
     padding: 115px 0 85px;
 }
-.pricingSection .l_03{
+.pricingSection .l_03, .pricingSection3 .l_03{
     left: auto;
     right: 0;
     top: -18%;
@@ -246,7 +246,7 @@
     margin: 0 0 15px;
 }
 .historySection{
-    padding: 0 0 185px;
+    padding: 0 0 50px;
 }
 .abHistory{
     position: relative;
@@ -338,8 +338,9 @@
     right: 0;
 }
 .pricingSection3{
-    padding: 120px 0 120px;
+    padding: 50px 0 50px;
 }
+
 .star_ratings{
     position: relative;
     margin: 14px 0 0;

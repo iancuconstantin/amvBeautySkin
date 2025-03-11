@@ -1,6 +1,6 @@
-const API_KEY = "AIzaSyDy2Wau6Y-rr8sy8K7SyQVlGpZU__3fCTQ";
+const API_KEY = "AIzaSyBf0M-4i1jS-BBu5D2lG4yQAHenSmawlVA";
 const POSTID = localStorage.getItem('selectedArticleId');
-const URL = `https://www.googleapis.com/blogger/v3/blogs/5459460529574556850/posts/${POSTID}?key=${API_KEY}`;
+const URL = `https://www.googleapis.com/blogger/v3/blogs/6407374995812932765/posts/${POSTID}?key=${API_KEY}`;
 const PROXY = "https://api.allorigins.win/get?url=" + encodeURIComponent(URL);
 
 
@@ -14,7 +14,7 @@ fetch(PROXY)
     .then(response => response.json())
     .then(data => {
         const parsedData = JSON.parse(data.contents);
-        console.log(parsedData);
+        console.log(parsedData)
         
         const pageTitle = document.getElementById("banner-title")
         pageTitle.innerHTML = `${parsedData.title}`;
@@ -36,7 +36,7 @@ fetch(PROXY)
         parsedData.labels.forEach(tag => {
             let tagLink = document.createElement("a");
             tagLink.textContent = tag;
-            tagLink.href = `https://iancuconstantin.blogspot.com/search/label/${tag}`;
+            tagLink.href = `https://amvbeautyskin.blogspot.com/search/label/${tag}`;
             tagsContainer.appendChild(tagLink);
             tagLink.target = "_blank";
             tagsContainer.appendChild(document.createElement("br"));

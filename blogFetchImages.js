@@ -10,8 +10,6 @@ const fetchImages = async () => {
     });
     const data = await response.json();
     data.photos.forEach(photo => {
-      console.log(photo.src.original); // URL-ul imaginii
-      // Poți adăuga imaginea într-un element HTML
       const imgElement = document.getElementById('postImage');
       imgElement.src = photo.src.original; 
     });

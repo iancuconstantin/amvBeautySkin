@@ -400,6 +400,39 @@
     margin-top: 2px;
 }
 
+/* ABOUT SECTION START */
+
+.bibliografie {
+    max-width: 600px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    color: #f7a392;
+}
+.list {
+    list-style: none;
+    padding: 0;
+}
+.list li {
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+.list i {
+    margin-right: 8px;
+    color: #2c3e50;
+}
+
+/* ABOUT SECTION END */
 
 
 @media (min-width: 1200px) and (max-width: 1600px){

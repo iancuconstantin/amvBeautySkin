@@ -37,8 +37,18 @@ fetch(PROXY)
             tagsContainer.appendChild(document.createElement("br"));
         });
         addBlockquoteClassAndWrapContent();
+        updateMetaTags(parsedData);
     })
-    .catch(error => console.error("Eroare preluare date", error));
+    .catch(error => {
+        console.error("Eroare la fetch:", error);
+        let subTitle = document.getElementById("subTitle");
+        subTitle.innerHTML = "<h1>Ceva nu a mers bine. Încearcă mai tarziu.</h1>";
+
+        
+        setTimeout(() => {
+            window.location.href = '/blog.html';
+        }, 3000);
+      });
 
     function addBlockquoteClassAndWrapContent() {
         const blockquotes = document.querySelectorAll('blockquote');
@@ -50,4 +60,37 @@ fetch(PROXY)
             blockquote.innerHTML = '';
             blockquote.appendChild(p);
         });
+    }
+
+    function updateMetaTags(data) {
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.setAttribute("content", data.title);
+        }
+
+        const ogTitle = document.querySelector('meta[property="og:title"]');
+        const ogDescription = document.querySelector('meta[property="og:description"]');
+        const ogUrl = document.querySelector('meta[property="og:url"]');
+        const articlePublishedTime = document.querySelector('meta[property="article:published_time"]');
+        const articleModifiedTime = document.querySelector('meta[property="article:modified_time"]');
+        const articleAuthor = document.querySelector('meta[property="article:author"]');
+    
+        if (ogTitle) {
+            ogTitle.setAttribute("content", data.title);
+        }
+        if (ogDescription) {
+            ogDescription.setAttribute("content", data.title);
+        }
+        if (ogUrl) {
+            ogUrl.setAttribute("content", window.location.href);
+        }
+        if (articlePublishedTime) {
+            articlePublishedTime.setAttribute("content", formatDate(data.published));
+        }
+        if (articleModifiedTime && data.updated) {
+            articleModifiedTime.setAttribute("content", formatDate(data.updated));
+        }
+        if (articleAuthor && data.author) {
+            articleAuthor.setAttribute("content", data.author.displayName);
+        }
     }

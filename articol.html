@@ -1,12 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>AMV Beauty Skin - Blog</title>
+        <title>AMV Beauty Skin</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Clean Beauty Spa with predefined web elements which helps you to build your own site. These template is suitable for spa, beauty, care, girly, hair, health, beauty parlour, massage, skincare, saloon, make up, physiotherapy, salon, wellness, yoga website. Yoga & Meditation centers, Barbershop, Health & Wellness Centers, Medical, Physiotherapy, Cosmetic Treatment centers, ayurvedic treatments, pedicure, manicure procedures.">
-        <meta name="keywords" content="spa, beauty, care, girly, hair, health, beauty parlour, massage, skincare, saloon, make up, physiotherapy, salon, wellness, yoga website. Yoga & Meditation centers, Barbershop, Health & Wellness Centers, Medical, Physiotherapy, Cosmetic Treatment centers, ayurvedic treatments, pedicure, manicure procedures">
+        <meta name="description" content="Citește articolul nostru despre [Titlul articolului]. Află cele mai bune sfaturi pentru îngrijirea pielii, tratamente faciale, tendințe beauty și multe altele. Descoperă secretul unui ten sănătos la AMV Beauty Skin.">
+        <meta name="keywords" content="tratamente faciale, îngrijire piele, sfaturi beauty, skincare tips, rejuvenare, AMV Beauty Skin, frumusete, articole beauty, anti-aging, tratamente anti-aging">
         <meta name="author" content="ThemeWar">
+        <meta property="og:title" content="Articolul despre [Titlul articolului] - AMV Beauty Skin">
+        <meta property="og:description" content="Citește acum despre [Tema articolului] și învață cum să îți îngrijești pielea corespunzător. Descoperă sfaturi, trucuri și cele mai noi tratamente faciale și corporale oferite de AMV Beauty Skin.">
+        <meta property="og:image" content="./images/seo logo.jpg">
+        <meta property="og:url" content="[URL pagina articolului]">
+        <meta property="og:type" content="article">
+        <meta property="og:site_name" content="AMV Beauty Skin">
+        <meta property="article:published_time" content="[Data publicării articolului]">
+        <meta property="article:modified_time" content="[Data ultimei modificări a articolului]">
+        <meta property="article:author" content="[Numele autorului articolului]">
+
 
         <!-- Start Include All CSS -->
         <link rel="stylesheet" href="css/bootstrap.css"/>
@@ -25,6 +35,7 @@
         
         <!-- Revolution Slider Setting CSS -->
         <link rel="stylesheet" href="css/settings.css">
+
         <link rel="stylesheet" href="css/preset.css"/>
         <link rel="stylesheet" href="css/ignore_for_wp.css"/>
         <link rel="stylesheet" href="css/theme.css"/>
@@ -66,16 +77,16 @@
                                 <li class="menu-item-has-children">
                                     <a href="javascript:void(0);">Servicii</a>
                                     <ul class="sub-menu">
-                                        <li><a href="package.html#top5">Top 5 Terapii Faciale</a></li>
-                                        <li><a href="package.html#pachete">Terapie LIPOSONIX</a></li>
-                                        <li><a href="package.html#estetica_faciala">Estetică Facială</a></li>
-                                        <li><a href="package.html#estetica_corporala">Estetică Corporală</a></li>
-                                        <li><a href="package.html#epilare_definitiva">Epilare Definitivă</a></li>
-                                        <li><a href="package.html#cosmetica">Cosmetică/ Îngrijire personală</a></li>
-                                        <li><a href="package.html#makeup">Make-Up</a></li>
+                                        <li><a href="servicii.html#top5">Top 5 Terapii Faciale</a></li>
+                                        <li><a href="servicii.html#pachete">Terapie LIPOSONIX</a></li>
+                                        <li><a href="servicii.html#estetica_faciala">Estetică Facială</a></li>
+                                        <li><a href="servicii.html#estetica_corporala">Estetică Corporală</a></li>
+                                        <li><a href="servicii.html#epilare_definitiva">Epilare Definitivă</a></li>
+                                        <li><a href="servicii.html#cosmetica">Cosmetică/ Îngrijire personală</a></li>
+                                        <li><a href="servicii.html#makeup">Make-Up</a></li>
                                     </ul>
                                 </li>
-                                <li class="current-menu-item"><a href="blog5.html">Blog</a></li>
+                                <li class="current-menu-item"><a href="blog.html">Blog</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </nav>
@@ -144,13 +155,13 @@
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-5 offset-lg-1">
-                        <h2 class="banner-title">Blog</h2>
-                        <p class="breadcrumbs"><a href="index.html">Acasă</a><span>/</span>Blog</p>
+                    <div class="col-lg-5 col-md-5 offset-lg-1">
+                        <h2 class="banner-title" id="banner-title">Loading...</h2>
+                        <p class="breadcrumbs"><a href="index.html">Acasă</a><span>/</span><a href="blog.html">Blog</a><span>/</span>Articol Blog</p>
                     </div>
-                    <div class="col-lg-6 animated pnl">
+                    <div class="col-lg-6 col-md-6 animated pnl">
                         <div class="page_layer">
-                            <img src="images/home_01/3.png" alt="" style="position: relative; margin-top: -40px;"/>
+                            <img src="images/bg/banner_layer.png" alt=""/>
                         </div>
                     </div>
                 </div>
@@ -158,14 +169,40 @@
         </section>
         <!-- End:: Banner Section -->
 
-        <!-- Begin:: Blog Section -->
-        <section class="blogPage">
+        <!-- Begin:: Single Blog Section -->
+        <section class="singleBlog">
             <div class="container">
-                <div class="row" id="postsList">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="postThumb">
+                            <img id="postImage" src="" alt=""/>
+                        </div>
+                        <div class="sic_details clearfix">
+                            <span class="bpdate" id="bpdate"></span>
+                            <h3 id="subTitle"></h3>
+                            <div class="sic_the_content clearfix"> 
+                            </div>
+                            <div class="spMeta clearfix">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="tags" id="tags">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="socialShare">
+                                            <a target="_blank" href="https://www.facebook.com/p/AMV_Beauty-Skin-100092994287550/"><i class="icofont-facebook"></i></a>
+                                            <a target="_blank" href="https://www.instagram.com/amv_beauty_skin/"><i class="icon-instagram1"></i></a>
+                                            <a target="_blank" href="https://www.tiktok.com/@amv_beauty_skin"><i class="icon-tiktok"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-        <!-- End:: Blog Section -->
+        <!-- End:: Single Blog Section -->
         
         <!-- Begin:: Footer Section -->
         <footer class="footer_01 fm_dark">
@@ -256,16 +293,6 @@
         </section>
         <!-- End:: Footer Section -->
         
-
-        <!-- Whats App Image -->
-        <div class="whatsApp--btn">
-            <a href="https://wa.me/40727822852?text=Bună,%20vreau%20mai%20multe%20informații!" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" width="50" alt="WhatsApp">
-            </a>
-        </div>
-        <!-- Whats App Image end -->
-
-
         <!-- Bact To Top -->
         <a href="javascript:void(0);" id="backtotop"><i class="icofont-bubble-up"></i></a>
         <!-- Bact To Top -->
@@ -285,7 +312,8 @@
         <script src="js/tweenmax.min.js"></script>
         <script src="js/theia-sticky-sidebar.min.js"></script>
         <script src="js/ResizeSensor.min.js"></script>
-        <script src="./js/blog-fetch.js"></script>
+        <script src="./js/blogContentFetch.js"></script>
+        <script src="./js/blogFetchImages.js"></script>
         
         <!-- Slider Revolution Main Files -->
         <script src="js/jquery.themepunch.tools.min.js"></script>

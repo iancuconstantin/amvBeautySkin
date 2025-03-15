@@ -466,7 +466,7 @@
     /*--- Mobile Menu ---*/
     .header_01.fixedHeader,
     .header_03.fixedHeader{
-        position: inherit;
+        /* position: inherit; */
     }
     header .menu-col{
         -ms-flex: 0 0 100%;

@@ -7,7 +7,6 @@ fetch(PROXY)
   .then(response => response.json())
   .then(data => {
     const parsedData = JSON.parse(data.contents);
-    console.log("VERIFICARE: ", parsedData)
     if (parsedData.items) {
         parsedData.items.forEach((item) => {
             

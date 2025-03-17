@@ -40,11 +40,9 @@ fetch(PROXY)
         updateMetaTags(parsedData);
     })
     .catch(error => {
-        console.error("Eroare la fetch:", error);
         let subTitle = document.getElementById("subTitle");
         subTitle.innerHTML = "<h1>Ceva nu a mers bine. Încearcă mai tarziu.</h1>";
 
-        
         setTimeout(() => {
             window.location.href = '/blog.html';
         }, 3000);

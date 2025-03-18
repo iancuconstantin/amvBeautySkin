@@ -9,11 +9,11 @@ $config = include('/home/amvbeaut/phpconfig.php');
 $name = isset($_POST['nume']) ? htmlspecialchars($_POST['nume']) : '';
 $email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
 $phone = isset($_POST['telefon']) ? htmlspecialchars($_POST['telefon']) : '';
-$subject = isset($_POST['subiect']) ? htmlspecialchars($_POST['subiect']) : '';
+$subjectForm = isset($_POST['subiect']) ? htmlspecialchars($_POST['subiect']) : '';
 $message = isset($_POST['mesaj']) ? htmlspecialchars($_POST['mesaj']) : '';
 
 // Verifică dacă sunt completate toate câmpurile
-if (empty($name) || empty($phone) || empty($email) || empty($message)  || empty($subject)) {
+if (empty($name) || empty($phone) || empty($email) || empty($message)  || empty($subjectForm)) {
   echo json_encode(['status' => 'error', 'message' => 'Toate câmpurile sunt obligatorii.']);
   exit; // Termină execuția scriptului
 }
@@ -23,7 +23,17 @@ $from = $config['smtp_user']; // Adresa care trimite
 $to = $config['to_email']; // Adresa care primește
 
 $subject = "Mesaj nou de la $name";
-$body = "Ai primit un mesaj de la $name ($email):\n\n$message";
+$body = "
+    <html>
+        <body>
+            <p><strong>Subiect:</strong> $subjectForm</p>
+            <p><strong>Mesajul a fost trimis de:</strong> $name ($email)</p>
+            <p><strong>Telefon:</strong> $phone</p>
+            <p><strong>Mesaj:</strong></p>
+            <p>$message</p>
+        </body>
+    </html>
+";
 
 $headers = array(
     'MIME-Version' => '1.0',

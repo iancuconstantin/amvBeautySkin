@@ -1,7 +1,7 @@
 function openPopup(message, status) {
-  
-  document.getElementById("popupNewsLetter").style.display = "block";
-  document.getElementById("overlayNewsLetter").style.display = "block";
+  console.log("verificare getElement: ", document.getElementById("popupNewsletter"));
+  document.getElementById("popupNewsletter").style.display = "block";
+  document.getElementById("overlayNewsletter").style.display = "block";
   if(status === 200){
     document.getElementById("messageNewsletter").style.color = "green";
   } else {
@@ -12,8 +12,8 @@ function openPopup(message, status) {
 }
 
 function closePopup() {
-  document.getElementById("popupNewsLetter").style.display = "none";
-  document.getElementById("overlayNewsLetter").style.display = "none";
+  document.getElementById("popupNewsletter").style.display = "none";
+  document.getElementById("overlayNewsletter").style.display = "none";
 }
 
 

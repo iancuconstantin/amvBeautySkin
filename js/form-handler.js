@@ -3,11 +3,11 @@ function openPopup(message, status) {
   document.getElementById("popupNewsLetter").style.display = "block";
   document.getElementById("overlayNewsLetter").style.display = "block";
   if(status === 200){
-    document.getElementById("message-text").style.color = "green";
+    document.getElementById("messageNewsletter").style.color = "green";
   } else {
-    document.getElementById("message-text").style.color = "red";
+    document.getElementById("messageNewsletter").style.color = "red";
   }
-  document.getElementById("message-text").textContent = message;
+  document.getElementById("messageNewsletter").textContent = message;
   setTimeout(closePopup, 3000);
 }
 

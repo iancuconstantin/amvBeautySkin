@@ -212,19 +212,28 @@
                             <div class="row">
                                 <div class="col-lg-8 col-md-7">
                                     <div class="appointment_form">
-                                        <form action="#" method="post" class="row" id="contact_form">
+                                        <form name="contact" class="row" id="contact_form" novalidate>
                                             <div class="input-field col-lg-6">
-                                                <input class="required" type="text" name="name" placeholder="Nume">
+                                                <input class="required form-control" type="text" name="nume" placeholder="Nume*" required>
+                                                <div class="invalid-feedback">
+                                                    Completati numele
+                                                </div>
                                             </div>
                                             <div class="input-field col-lg-6">
-                                                <input class="required" type="email" name="email" placeholder="Adresa Email">
+                                                <input class="required form-control" type="email" name="email" placeholder="Adresa Email*" required>
+                                                <div class="invalid-feedback">
+                                                    Completati adresa de email
+                                                </div>
                                             </div>
                                             <div class="input-field col-lg-6">
-                                                <input type="number" name="con_phone" placeholder="Numar de telefon">
+                                                <input class="required form-control" type="tel" name="telefon" placeholder="Numar de telefon*" required minlength="10" maxlength="15" required>
+                                                <div class="invalid-feedback">
+                                                    Completati numarul de telefon
+                                                </div>
                                             </div>
-                                            <div class="input-field col-lg-6 select-area">
-                                                <select class="required" name="selec">
-                                                    <option selected="selected">Selecteaza Subiect</option>
+                                            <div class="input-field col-lg-6">
+                                                <select class="required" name="subiect" required>
+                                                    <option disabled value="" selected>Selecteaza Subiect*</option>
                                                     <option value="Estetica Faciala">Estetică Facială</option>
                                                     <option value="Estetica Corporala">Estetică Corporală</option>
                                                     <option value="Cosmetica - Ingrijire personala">Cosmetică - Îngrijire personală</option>
@@ -232,18 +241,27 @@
                                                     <option value="Epilare Definitiva">Epilare Definitivă</option>
                                                     <option value="Altul">Altul</option>
                                                 </select>
+                                                <div class="invalid-feedback">
+                                                    Alegeti un subiect din lista
+                                                </div>
                                             </div>
                                             <div class="input-field col-lg-12">
-                                                <textarea class="required" name="con_message" placeholder="Mesajul Tau"></textarea>
+                                                <textarea class="required form-control" name="mesaj" placeholder="Mesajul Tau*" required></textarea>
                                             </div>
                                             <div class="input-field col-lg-12">
                                                 <div class="form-check">
-                                                    <input class="form-check-input required" type="checkbox" id="terms" checked />
+                                                    <input class="form-check-input required form-control" type="checkbox" id="terms" checked required/>
                                                     <label class="form-check-label" for="terms">Accept <a href="termeni.html">Termenii și condițiile</a></label>
+                                                    <div class="invalid-feedback">
+                                                        Acceptati Termenii și condițiile
+                                                    </div>
                                                 </div>
                                                 <div class="form-check">
-                                                    <input class="form-check-input required" type="checkbox" id="gdpr" checked />
-                                                    <label class="form-check-label" for="gdpr">Accept <a href="confidentialitate.html">politica GDPR</a></label>
+                                                    <input class="form-check-input required form-control" type="checkbox" id="gdpr" checked required/>
+                                                    <label class="form-check-label" for="gdpr">Accept <a href="confidentialitate.html">Politica GDPR</a></label>
+                                                    <div class="invalid-feedback">
+                                                        Acceptati Politica GDPR
+                                                    </div>
                                                 </div>                                                
                                             </div>
                                             <div class="input-field col-lg-12">
@@ -388,6 +406,11 @@
         <a href="javascript:void(0);" id="backtotop"><i class="icofont-bubble-up"></i></a>
         <!-- Bact To Top -->
 
+
+
+        <!-- Link to the external JavaScript file -->
+        <!-- <script src="./js/form-handler.js"></script> -->
+        <script src="./js/form-handler-contact.js"></script>
 
         <script>
             function openGoogleMaps() {

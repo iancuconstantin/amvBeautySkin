@@ -679,56 +679,5 @@
     /*--------------------------------------------------------
     / 19. Contact Form Submission
     /---------------------------------------------------------*/
-    $('#contact_form').on('submit', function (e) {
-        e.preventDefault();
-        var $this = $(this);
-
-        $('button[type="submit"]', this).attr('disabled', 'disabled').val('Processing...');
-        var form_data = $this.serialize();
-
-        var required = 0;
-        $(".required", this).each(function () {
-            if ($(this).val() === ''){
-                $(this).addClass('reqError');
-                required += 1;
-            } else{
-                if ($(this).hasClass('reqError'))
-                {
-                    $(this).removeClass('reqError');
-                    if (required > 0)
-                    {
-                        required -= 1;
-                    }
-                }
-            }
-        });
-
-        if (required === 0) {
-            $.ajax({
-                type: 'POST',
-                url: 'mail/mail.php',
-                data: {form_data: form_data},
-                success: function (data) {
-                    $('button[type="submit"]', $this).removeAttr('disabled').val('Message');
-
-                    $('.con_message', $this).fadeIn().html('<strong>Congratulations!</strong> Your query successfully sent to site admin.').removeClass('alert-warning').addClass('alert-success');
-                    setTimeout(function () {
-                        $('.con_message', $this).fadeOut().html('').removeClass('alert-success alert-warning');
-                    }, 5000);
-                }
-            });
-        } else {
-            $('button[type="submit"]', $this).removeAttr('disabled').val('Message');
-            $('.con_message', $this).fadeIn().html('<strong>Opps!</strong> Error found. Please fix those and re submit.').removeClass('alert-success').addClass('alert-warning');
-            setTimeout(function () {
-                $('.con_message', $this).fadeOut().html('').removeClass('alert-success alert-warning');
-            }, 5000);
-        }
-
-    });
-    $(".required").on('keyup', function () {
-        $(this).removeClass('reqError');
-    });
-		
-
+    	
 })(jQuery);

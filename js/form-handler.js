@@ -1,5 +1,4 @@
 function openPopupNewsletter(message, status) {
-  console.log("verificare getElement: ", document.getElementById("popupNewsletter"));
   document.getElementById("popupNewsletter").style.display = "block";
   document.getElementById("overlayNewsletter").style.display = "block";
   if(status === 200){

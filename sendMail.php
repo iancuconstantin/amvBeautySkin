@@ -13,7 +13,7 @@ $subject = isset($_POST['subiect']) ? htmlspecialchars($_POST['subiect']) : '';
 $message = isset($_POST['mesaj']) ? htmlspecialchars($_POST['mesaj']) : '';
 
 // Verifică dacă sunt completate toate câmpurile
-if (empty($name) || empty($phone) || empty($email) || empty($message)) {
+if (empty($name) || empty($phone) || empty($email) || empty($message)  || empty($subject)) {
   echo json_encode(['status' => 'error', 'message' => 'Toate câmpurile sunt obligatorii.']);
   exit; // Termină execuția scriptului
 }

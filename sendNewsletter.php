@@ -23,6 +23,14 @@ $subject = "Nouă abonare la newsletter";
 $body = "Ai un nou abonat la newsletter:
 
 Email: $email";
+$body = "
+  <html>
+        <body>
+            <p><strong>Subiect:</strong>Abonare noua la newsletter!</p>
+            <p><strong>Adresa abonat: </strong>$email</p>
+        </body>
+    </html>
+"
 
 $headers = array(
     'MIME-Version' => '1.0',

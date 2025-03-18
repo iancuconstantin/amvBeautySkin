@@ -1,4 +1,4 @@
-function openPopup(message, status) {
+function openPopupNewsletter(message, status) {
   console.log("verificare getElement: ", document.getElementById("popupNewsletter"));
   document.getElementById("popupNewsletter").style.display = "block";
   document.getElementById("overlayNewsletter").style.display = "block";
@@ -8,10 +8,10 @@ function openPopup(message, status) {
     document.getElementById("messageNewsletter").style.color = "red";
   }
   document.getElementById("messageNewsletter").textContent = message;
-  setTimeout(closePopup, 3000);
+  setTimeout(closePopupNewsletter, 3000);
 }
 
-function closePopup() {
+function closePopupNewsletter() {
   document.getElementById("popupNewsletter").style.display = "none";
   document.getElementById("overlayNewsletter").style.display = "none";
 }
@@ -29,12 +29,12 @@ document.getElementById('newsletter-form').addEventListener('submit', function(e
   .then(response => response.json())
   .then(data => {
       if (data.status === 'success') {
-          openPopup(`${data.message}`, 200);
+          openPopupNewsletter(`${data.message}`, 200);
           form.reset();
       }
   })
   .catch(error => {
-      openPopup(`${error.message}`, 500);
+      openPopupNewsletter(`${error.message}`, 500);
       form.reset();
   });
 });

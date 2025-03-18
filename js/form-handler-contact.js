@@ -49,11 +49,12 @@ document.getElementById('contact_form').addEventListener('submit', function(even
         if (data.status === 'success') {
             openPopup(`${data.message}`, 200);
             form.reset();
-            
+            form.classList.remove('was-validated');
         }
     })
     .catch(error => {
         openPopup(`${error.message}`, 500);
         form.reset();
+        form.classList.remove('was-validated');
     });
 });

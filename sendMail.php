@@ -6,11 +6,11 @@ require_once "/home/amvbeaut/php/Mail.php";
 $config = include('/home/amvbeaut/phpconfig.php');
 
 // Preia datele din formular
-$name = isset($_POST['username']) ? htmlspecialchars($_POST['username']) : '';
-$phone = isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : '';
-$subject = isset($_POST['subject']) ? htmlspecialchars($_POST['subject']) : '';
+$name = isset($_POST['nume']) ? htmlspecialchars($_POST['nume']) : '';
 $email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
-$message = isset($_POST['message']) ? htmlspecialchars($_POST['message']) : '';
+$phone = isset($_POST['telefon']) ? htmlspecialchars($_POST['telefon']) : '';
+$subject = isset($_POST['subiect']) ? htmlspecialchars($_POST['subiect']) : '';
+$message = isset($_POST['mesaj']) ? htmlspecialchars($_POST['mesaj']) : '';
 
 // Verifică dacă sunt completate toate câmpurile
 if (empty($name) || empty($phone) || empty($email) || empty($message)) {

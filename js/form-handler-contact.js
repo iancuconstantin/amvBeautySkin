@@ -36,21 +36,24 @@ document.querySelectorAll('#contact_form input, #contact_form select').forEach(f
 
 document.getElementById('contact_form').addEventListener('submit', function(event) {
     event.preventDefault();
-    const form = document.getElementById('contact_form');
+    const form = event.target;
+    const formData = new FormData(this);
     form.classList.add('was-validated');
-    // fetch('sendMail.php', {
-    //     method: 'POST',
-    //     body: formData
-    // })
-    // .then(response => response.json())
-    // .then(data => {
-    //     if (data.status === 'success') {
-    //         openPopup(`${data.message}`, 200);
-    //         form.reset();
-    //     }
-    // })
-    // .catch(error => {
-    //     openPopup(`${error.message}`, 500);
-    //     form.reset();
-    // });
+    
+    fetch('sendMail.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.status === 'success') {
+            openPopup(`${data.message}`, 200);
+            form.reset();
+            
+        }
+    })
+    .catch(error => {
+        openPopup(`${error.message}`, 500);
+        form.reset();
+    });
 });

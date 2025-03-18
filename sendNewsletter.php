@@ -19,7 +19,10 @@ $from = $config['smtp_user']; // Adresa care trimite
 $to = $config['to_email']; // Adresa care primește
 
 $subject = "Nouă abonare la newsletter";
-$body = "Ai un nou abonat la newsletter: $email";
+
+$body = "Ai un nou abonat la newsletter:
+
+Email: $email";
 
 $headers = array(
     'MIME-Version' => '1.0',

@@ -35,13 +35,40 @@
         <!-- Favicon Icon -->
          <!-- TABLE STYLE -->
          <style type="text/css">
-            .tg  {border-collapse:collapse;border-spacing:0;}
-            .tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-              overflow:hidden;padding:10px 5px;word-break:normal;}
-            .tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
-              font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
-            .tg .tg-amwm{font-weight:bold;text-align:center;vertical-align:top}
-            .tg .tg-0lax{text-align:left;vertical-align:top}
+            .tg {
+            border-collapse: collapse;
+            border-spacing: 0;
+            table-layout: fixed; 
+            width: 100%;
+            overflow-x: auto;
+            }
+
+            .tg td,
+            .tg th {
+            border-color: black;
+            border-style: solid;
+            border-width: 1px;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            padding: 10px 5px;
+            word-break: break-word;
+            overflow: hidden;
+            }
+
+            .tg .tg-amwm {
+            font-weight: bold;
+            text-align: center;
+            vertical-align: top;
+            }
+
+            .tg .tg-0lax {
+            text-align: left;
+            vertical-align: top;
+            }
+            p {
+              word-wrap: break-word;
+              overflow-wrap: break-word;
+            }
         </style>
     </head>
     <body>
@@ -258,9 +285,9 @@
                     <div class="col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
                         <aside class="widget mailchimp">
                             <h3 class="widget_title">Newsletter</h3>
-                            <form action="#" method="post">
+                            <form name="newsletter" id="newsletter-form">
                                 <div class="mc4wp-form-fields">
-                                    <input type="email" name="EMAIL" placeholder="Email">
+                                    <input type="email" name="newsletter" placeholder="Email" required>
                                     <button type="submit" aria-label="Trimite formularul"><i class="icofont-long-arrow-right"></i></button>
                                 </div>
                             </form>

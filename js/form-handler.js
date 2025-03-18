@@ -31,7 +31,6 @@ document.getElementById('newsletter-form').addEventListener('submit', function(e
       if (data.status === 'success') {
           openPopup(`${data.message}`, 200);
           form.reset();
-          
       }
   })
   .catch(error => {

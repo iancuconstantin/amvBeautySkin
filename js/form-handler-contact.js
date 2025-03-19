@@ -64,31 +64,35 @@ document.getElementById('contact_form').addEventListener('submit', function(even
     const form = event.target;
     form.classList.add('was-validated');
 
-    if (form.checkValidity()) {
+    // Execută reCAPTCHA doar dacă API-ul este încărcat
+    if (typeof grecaptcha !== 'undefined' && grecaptcha.execute) {
         grecaptcha.ready(function() {
-            grecaptcha.execute('6LcTkfkqAAAAAHpnkU3pz36cglIjb7gjjC9xRGwX', {action: 'submit'}).then(function(token) {
-                document.getElementById('g-recaptcha-response').value = token;
-
-                const formData = new FormData(form);
-                
-                fetch('sendMail.php', {
-                    method: 'POST',
-                    body: formData
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status === 'success') {
-                        openPopup(`${data.message}`, 200);
-                        form.reset();
-                        form.classList.remove('was-validated');
-                    } else {
-                        openPopup(`${data.message}`, 500);
-                    }
-                })
-                .catch(error => {
-                    openPopup(`Eroare la trimitere: ${error.message}`, 500);
+            grecaptcha.execute('6LcTkfkqAAAAAHpnkU3pz36cglIjb7gjjC9xRGwX', {action: 'submit'})
+                .then(function(token) {
+                    document.getElementById('g-recaptcha-response').value = token;
+                    
+                    const formData = new FormData(form);
+                    
+                    fetch('sendMail.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === 'success') {
+                            openPopup(`${data.message}`, 200);
+                            form.reset();
+                            form.classList.remove('was-validated');
+                        } else {
+                            openPopup(`${data.message}`, 500);
+                        }
+                    })
+                    .catch(error => {
+                        openPopup(`Eroare la trimitere: ${error.message}`, 500);
+                    });
                 });
-            });
         });
+    } else {
+        openPopup('Eroare la încărcarea reCAPTCHA. Vă rugăm să reîncărcați pagina.', 500);
     }
 });

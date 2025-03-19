@@ -4,7 +4,7 @@ require_once "/home/amvbeaut/php/Mail.php";
 
 // Încarcă datele SMTP din `phoconfig.php`
 $config = include('/home/amvbeaut/phpconfig.php');
-
+$recaptchaSecret = '6LcTkfkqAAAAAP7MSSWc9a4upRwusdN-TWyzi07i';
 // Preia datele din formular
 $name = isset($_POST['nume']) ? htmlspecialchars($_POST['nume']) : '';
 $email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
@@ -12,37 +12,43 @@ $phone = isset($_POST['telefon']) ? htmlspecialchars($_POST['telefon']) : '';
 $subjectForm = isset($_POST['subiect']) ? htmlspecialchars($_POST['subiect']) : '';
 $message = isset($_POST['mesaj']) ? htmlspecialchars($_POST['mesaj']) : '';
 $recaptchaResponse = isset($_POST['g-recaptcha-response']) ? $_POST['g-recaptcha-response'] : '';
+$verifyResponse = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret={$recaptchaSecret}&response={$recaptchaResponse}");
+$responseData = json_decode($verifyResponse, true);
 
 //  **Verifică dacă reCAPTCHA a fost completat**
-if (empty($recaptchaResponse)) {
-    echo json_encode(['status' => 'error', 'message' => 'Verificare reCAPTCHA necesară.']);
-    exit;
+// if (empty($recaptchaResponse)) {
+//     echo json_encode(['status' => 'error', 'message' => 'Verificare reCAPTCHA necesară.']);
+//     exit;
+// }
+if (!$responseData["success"]) {
+  echo json_encode(['status' => 'error', 'message' => 'Verificare reCAPTCHA eșuată!']);
+  exit;
 }
 
 //  **Trimite cererea către serverul Google pentru verificare**
-$recaptchaSecret = '6LcTkfkqAAAAAP7MSSWc9a4upRwusdN-TWyzi07i';
-$url = 'https://www.google.com/recaptcha/api/siteverify';
-$data = [
-    'secret' => $recaptchaSecret,
-    'response' => $recaptchaResponse
-];
 
-$options = [
-    'http' => [
-        'method'  => 'POST',
-        'header'  => 'Content-type: application/x-www-form-urlencoded',
-        'content' => http_build_query($data)
-    ]
-];
+// $url = 'https://www.google.com/recaptcha/api/siteverify';
+// $data = [
+//     'secret' => $recaptchaSecret,
+//     'response' => $recaptchaResponse
+// ];
 
-$context  = stream_context_create($options);
-$response = file_get_contents($url, false, $context);
-$responseKeys = json_decode($response, true);
+// $options = [
+//     'http' => [
+//         'method'  => 'POST',
+//         'header'  => 'Content-type: application/x-www-form-urlencoded',
+//         'content' => http_build_query($data)
+//     ]
+// ];
 
-if (!$responseKeys["success"]) {
-    echo json_encode(['status' => 'error', 'message' => 'Verificare reCAPTCHA eșuată. Încercați din nou.']);
-    exit;
-}
+// $context  = stream_context_create($options);
+// $response = file_get_contents($url, false, $context);
+// $responseKeys = json_decode($response, true);
+
+// if (!$responseKeys["success"]) {
+//     echo json_encode(['status' => 'error', 'message' => 'Verificare reCAPTCHA eșuată. Încercați din nou.']);
+//     exit;
+// }
 
 //  **Continuă procesarea formularului dacă reCAPTCHA este valid**
 if (empty($name) || empty($phone) || empty($email) || empty($message) || empty($subjectForm)) {

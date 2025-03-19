@@ -34,27 +34,61 @@ document.querySelectorAll('#contact_form input, #contact_form select').forEach(f
 });
 
 
+// document.getElementById('contact_form').addEventListener('submit', function(event) {
+//     event.preventDefault();
+//     const form = event.target;
+//     const formData = new FormData(this);
+//     form.classList.add('was-validated');
+    
+//     fetch('sendMail.php', {
+//         method: 'POST',
+//         body: formData
+//     })
+//     .then(response => response.json())
+//     .then(data => {
+//         if (data.status === 'success') {
+//             openPopup(`${data.message}`, 200);
+//             form.reset();
+//             form.classList.remove('was-validated');
+//         }
+//     })
+//     .catch(error => {
+//         openPopup(`${error.message}`, 500);
+//         form.reset();
+//         form.classList.remove('was-validated');
+//     });
+// });
+
 document.getElementById('contact_form').addEventListener('submit', function(event) {
     event.preventDefault();
     const form = event.target;
-    const formData = new FormData(this);
     form.classList.add('was-validated');
-    
-    fetch('sendMail.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if (data.status === 'success') {
-            openPopup(`${data.message}`, 200);
-            form.reset();
-            form.classList.remove('was-validated');
-        }
-    })
-    .catch(error => {
-        openPopup(`${error.message}`, 500);
-        form.reset();
-        form.classList.remove('was-validated');
-    });
+
+    if (form.checkValidity()) {
+        grecaptcha.ready(function() {
+            grecaptcha.execute('6LcTkfkqAAAAAHpnkU3pz36cglIjb7gjjC9xRGwX', {action: 'submit'}).then(function(token) {
+                document.getElementById('g-recaptcha-response').value = token;
+
+                const formData = new FormData(form);
+                
+                fetch('sendMail.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        openPopup(`${data.message}`, 200);
+                        form.reset();
+                        form.classList.remove('was-validated');
+                    } else {
+                        openPopup(`${data.message}`, 500);
+                    }
+                })
+                .catch(error => {
+                    openPopup(`Eroare la trimitere: ${error.message}`, 500);
+                });
+            });
+        });
+    }
 });

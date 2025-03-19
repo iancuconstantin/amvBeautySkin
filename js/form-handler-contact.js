@@ -64,7 +64,6 @@ document.getElementById('contact_form').addEventListener('submit', function(even
     const form = event.target;
     form.classList.add('was-validated');
 
-    // Execută reCAPTCHA doar dacă API-ul este încărcat
     if (typeof grecaptcha !== 'undefined' && grecaptcha.execute) {
         grecaptcha.ready(function() {
             grecaptcha.execute('6LcTkfkqAAAAAHpnkU3pz36cglIjb7gjjC9xRGwX', {action: 'submit'})

@@ -51,7 +51,7 @@
         <!-- Start cookieyes banner --> 
         <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/3ace95e5cf196306f9b597e4/script.js"></script> 
         <!-- End cookieyes banner -->
-        <script src="https://www.google.com/recaptcha/enterprise.js?render=6LcTkfkqAAAAAHpnkU3pz36cglIjb7gjjC9xRGwX"></script>
+        <script src="https://www.google.com/recaptcha/api.js?render=6LcTkfkqAAAAAHpnkU3pz36cglIjb7gjjC9xRGwX" async defer></script>
     </head>
     <body>
         <!-- Preloading -->
@@ -194,6 +194,8 @@
                                 <div class="appointment_form">
                                     <h4>📩 Completează formularul și revenim cu detalii cât mai repede!</h4>
                                     <form name="contact" class="row" id="contact_form" novalidate>
+                                        <!-- reCAPTCHA -->
+                                        <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
                                         <div class="input-field col-lg-6">
                                             <input class="required form-control" type="text" name="nume" placeholder="Nume*" required>
                                             <div class="invalid-feedback">
@@ -244,11 +246,15 @@
                                                 <div class="invalid-feedback">
                                                     Acceptati Politica GDPR
                                                 </div>
-                                            </div>
-                                            <div class="g-recaptcha" data-sitekey="6LcTkfkqAAAAAHpnkU3pz36cglIjb7gjjC9xRGwX"></div>                                              
+                                            </div>                                              
                                         </div>
                                         <div class="input-field col-lg-12">
-                                            <button type="submit" class="mo_btn mob_lg" style="margin: 15px;"><i class="noun-noun_Email_485891"></i>Trimite Mesajul</button>
+                                            <button type="submit" class="mo_btn mob_lg" 
+                                                style="margin: 15px;"
+                                                data-sitekey="6LcTkfkqAAAAAHpnkU3pz36cglIjb7gjjC9xRGwX"
+                                                data-callback="onSubmit"
+                                                data-action="submit"
+                                            ><i class="noun-noun_Email_485891"></i>Trimite Mesajul</button>
                                             <div class="con_message"></div>
                                         </div>
                                     </form>

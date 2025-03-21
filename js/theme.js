@@ -660,21 +660,12 @@
     /*--------------------------------------------------------
     / 18. Preloader
     /---------------------------------------------------------*/
-    // $(window).on('load', function () {
-    //     var preload = $('.preloader');
-    //     if (preload.length > 0) {
-    //         preload.delay(800).fadeOut('slow');
-    //     }
-    // });
-    window.onload = function () {
-        var preload = document.querySelector('.preloader');
-        if (preload) {
-            preload.style.transition = "opacity 0.5s ease";
-            preload.style.opacity = "0";
-            setTimeout(() => { preload.style.display = "none"; }, 500);
+    $(window).on('load', function () {
+        var preload = $('.preloader');
+        if (preload.length > 0) {
+            preload.delay(800).fadeOut('slow');
         }
-    };
-    
+    });
     
     /*--------------------------------------------------------
     / 19. Contact Form Submission

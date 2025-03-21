@@ -1,0 +1,9 @@
+.lazy-section {
+    opacity: 0;  /* Secțiunile vor fi invizibile până când sunt vizibile */
+    transition: opacity 0.5s ease-in-out;  /* Efect de tranziție când devin vizibile */
+}
+
+/* Secțiunile care devin vizibile */
+.lazy-section.visible {
+    opacity: 1;
+}

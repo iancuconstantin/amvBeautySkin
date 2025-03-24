@@ -860,6 +860,14 @@ textarea{
     margin: 0;
 }
 
+
+/*-- Top 5 servicii ---*/
+.owl-stage{
+    display: flex;
+    align-items: flex-end;
+}
+
+
 /*-- Testimonial Section ---*/
 .clientSlider.owl-carousel .owl-item{
     text-align: center;

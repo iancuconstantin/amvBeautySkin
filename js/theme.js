@@ -206,6 +206,41 @@
             }
         });
     }
+
+    /*-- top 5 servicii--*/
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var owl = document.querySelector(".owl-carousel");
+        if (owl) {
+            $(owl).owlCarousel({
+                margin: 20,
+                loop:true,
+                autoplay:true,
+                autoplayTimeout:3000,
+                autoplayHoverPause:true,
+                responsiveClass:true,
+                responsive:{
+                    0:{
+                        items:1,
+                        
+                        loop:true
+                    },
+                    600:{
+                        items:2,
+                        
+                        loop:true
+                    },
+                    1000:{
+                        items:3,
+                        
+                        loop:true
+                    }
+                }
+            }); // Owl Carousel necesită jQuery pentru inițializare
+            
+        }
+        });
+
     
     /*-- Testimonail Slider --*/
     if (tw_testiSlider.length > 0) {

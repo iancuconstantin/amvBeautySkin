@@ -220,20 +220,28 @@
                 autoplayHoverPause:true,
                 responsiveClass:true,
                 responsive:{
-                    0:{
-                        items:1,
-                        
-                        loop:true
+                    0: {
+                        items: 1,
+                        loop: true
                     },
-                    600:{
-                        items:2,
-                        
-                        loop:true
+                    600: {
+                        items: 1,
+                        loop: true
                     },
-                    1000:{
-                        items:3,
-                        
-                        loop:true
+                    700: {
+                        items: 2,
+                        loop: true
+                    },
+                    829: {
+                        items: 3,
+                        loop: true
+                    },
+                    1200: {
+                        items: 3,
+                        loop: true
+                    },
+                    1800: {
+                        items: 3,
                     }
                 }
             }); // Owl Carousel necesită jQuery pentru inițializare

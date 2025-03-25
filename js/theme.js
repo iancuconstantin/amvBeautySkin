@@ -626,13 +626,6 @@
     /---------------------------------------------------------*/
     var back = $("#backtotop"),
         body = $("body, html");
-    // $(window).on('scroll', function () {
-    //     if ($(window).scrollTop() > $(window).height()){
-    //         back.css({bottom: '30px', opacity: '1', visibility: 'visible'});
-    //     } else {
-    //         back.css({bottom: '-30px', opacity: '0', visibility: 'hidden'});
-    //     }
-    // });
 
     $(window).on('scroll', function () {
         let whatsappBtn = $('.whatsApp--btn');

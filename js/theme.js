@@ -635,7 +635,6 @@
     // });
 
     $(window).on('scroll', function () {
-        let back = $('#back-to-top'); // Asigură-te că ai definit elementul
         let whatsappBtn = $('.whatsApp--btn');
         let isContactPage = window.location.pathname.includes("/contact");
         

@@ -626,13 +626,36 @@
     /---------------------------------------------------------*/
     var back = $("#backtotop"),
         body = $("body, html");
+    // $(window).on('scroll', function () {
+    //     if ($(window).scrollTop() > $(window).height()){
+    //         back.css({bottom: '30px', opacity: '1', visibility: 'visible'});
+    //     } else {
+    //         back.css({bottom: '-30px', opacity: '0', visibility: 'hidden'});
+    //     }
+    // });
+
     $(window).on('scroll', function () {
-        if ($(window).scrollTop() > $(window).height()){
-            back.css({bottom: '30px', opacity: '1', visibility: 'visible'});
+        let back = $('#back-to-top'); // Asigură-te că ai definit elementul
+        let whatsappBtn = $('.whatsApp--btn');
+        let isContactPage = window.location.pathname.includes("/contact");
+        
+        isContactPage? whatsappBtn.css({bottom:'150px'}) : whatsappBtn.css({bottom:'70px'});
+
+        if ($(window).scrollTop() > $(window).height()) {
+            back.css({
+                bottom: isContactPage ? '100px' : '30px', // Poziție diferită pe /contact
+                opacity: '1',
+                visibility: 'visible'
+            });
         } else {
-            back.css({bottom: '-30px', opacity: '0', visibility: 'hidden'});
+            back.css({
+                bottom: isContactPage ? '-100px' : '-30px',
+                opacity: '0',
+                visibility: 'hidden'
+            });
         }
     });
+
     body.on("click", "#backtotop", function (e) {
         e.preventDefault();
         body.animate({scrollTop: 0}, 800);

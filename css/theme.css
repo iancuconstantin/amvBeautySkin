@@ -867,6 +867,12 @@ textarea{
     align-items: flex-end;
 }
 
+#secondCarousel .owl-stage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
 /*-- Testimonial Section ---*/
 .clientSlider.owl-carousel .owl-item{

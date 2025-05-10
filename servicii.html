@@ -178,9 +178,25 @@
         </section>
         <!-- End:: Banner Section -->
 
+        <!-- MODAL START -->
+        <section class="packageSection2"> 
+              <div class="modal fade" id="myModal" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content border-0 bg-transparent position-relative">
+                    <button type="button" class="close position-absolute" data-dismiss="modal" aria-label="Close"
+                            style="top: 10px; right: 15px; z-index: 10;">
+                      <span aria-hidden="true" style="font-size: 2rem;">&times;</span>
+                    </button>
+                    <div class="modal-body p-0">
+                      <img src="./images/servicii/reclama.jpg" alt="amv_eveniment_nou" class="img-fluid w-100 d-block">
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <!-- MODAL END -->
+
         <section class="packageSection2">
-
-
             <section class="commonSection lazy-section" id="new" >
                 <div class="container">
                     <div class="row">
@@ -1432,6 +1448,15 @@
         <script src="js/extensions/revolution.extension.video.min.js"></script>
 
         <script src="js/theme.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+              setTimeout(function () {
+                var modalElement = document.getElementById('myModal');
+                var modal = new bootstrap.Modal(modalElement);
+                modal.show();
+              }, 3000); // apare după 3 secunde
+            });
+          </script>
         <!-- End Include All JS -->
     </body>
 </html>

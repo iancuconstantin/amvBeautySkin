@@ -125,5 +125,3 @@ if (window.location.hash) {
 } else {
   authenticate();
 }
-
-module.exports = { authenticate, handleAuthResponse, extractPhoneNumber, getAppointments };

@@ -27,7 +27,7 @@ function handleAuthResponse() {
 }
 
 function extractPhoneNumber(description) {
-    const regex = /Client phone:\s*([+O0o\d\s]{8,})/i;
+    const regex = /:\s*([+O0o\d\s]{8,})/i;
     const match = description?.match(regex);
     if (!match) return null;
     
@@ -65,19 +65,21 @@ async function getAppointments(calendarId = 'primary') {
       });
       
       const data = await response.json();
-      
       if (data.items && data.items.length > 0) {
-        const appointments = data.items.map(event => ({
-          title: event.summary,
-          date: event.start.dateTime || event.start.date,
-          phone: extractPhoneNumber(event.description),
-        })).filter(event => event.phone);
+        const appointments = data.items
+          .filter(event => event.description)
+          .map(event => ({
+            title: event.summary,
+            date: event.start.dateTime || event.start.date,
+            phone: extractPhoneNumber(event.description),
+        }));
 
 
         const container = document.getElementById('appointments-container');
         const row = document.createElement("div");
         row.className = "row";
         container.innerHTML = '';
+        
 
         appointments.forEach(event => {
             const card = document.createElement('div');

@@ -27,16 +27,16 @@ function handleAuthResponse() {
 }
 
 function extractPhoneNumber(description) {
-    const regex = /:\s*([+O0o\d\s]{8,})/i;
-    const match = description?.match(regex);
-    if (!match) return null;
-    
-    const cleanedNumber = match[1]
-      .replace(/[Oo]/g, '0')
-      .replace(/\s+/g, '');
+  const regex = /:\s*([+O0o\d\s]{8,})/i;
+  const match = description?.match(regex);
+  if (!match) return null;
   
-    return cleanedNumber;
-  }  
+  const cleanedNumber = match[1]
+    .replace(/[Oo]/g, '0')
+    .replace(/\s+/g, '');
+
+  return cleanedNumber;
+}  
 
 
 async function getAppointments(calendarId = 'primary') {
@@ -58,13 +58,24 @@ async function getAppointments(calendarId = 'primary') {
     const timeMin = startOfDay.toISOString();
     const timeMax = endOfDay.toISOString();
 
-    const response = await fetch(`https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?timeMin=${timeMin}&timeMax=${timeMax}&singleEvents=true&orderBy=startTime`, {
-        headers: {
-          Authorization: `Bearer ${accessToken}`
+    const container = document.getElementById('appointments-container');
+
+    try {
+      const response = await fetch(
+        `https://www.googleapis.com/calendar/v3/calendars/${calendarId}/events?timeMin=${timeMin}&timeMax=${timeMax}&singleEvents=true&orderBy=startTime`,
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`
+          }
         }
-      });
-      
+      );
+
+      if (!response.ok) {
+        throw new Error(`Google API error ${response.status}: ${response.statusText}`);
+      }
+
       const data = await response.json();
+
       if (data.items && data.items.length > 0) {
         const appointments = data.items
           .filter(event => event.description)
@@ -73,40 +84,40 @@ async function getAppointments(calendarId = 'primary') {
             date: event.start.dateTime || event.start.date,
             phone: extractPhoneNumber(event.description),
         }));
-
-
-        const container = document.getElementById('appointments-container');
-        const row = document.createElement("div");
-        row.className = "row";
-        container.innerHTML = '';
-        
-
-        appointments.forEach(event => {
-            const card = document.createElement('div');
-            card.classList.add('appointment-card');
-
-            const col = document.createElement("div");
-            col.className = "col-lg-4 col-md-6 col-sm-12 col-xs-12";
-            
-            
-            const phoneNumber = event.phone;
-            let message = `🔔 Reminder 🔔\nProgramare AMV Beauty Skin\nMâine, ${new Date(event.date).toLocaleString()}.\nVă așteptăm cu drag!\n 📍Maps: ${mapLinkGoogle}\n 📍Waze: ${mapLinkWaze}`;
-            const urlApiWhats = `https://api.whatsapp.com/send/?phone=4${phoneNumber}&text=${encodeURIComponent(message)}`;
-            card.innerHTML = `
-                <h3>${event.title}</h3>
-                <p><strong>Data:</strong> ${new Date(event.date).toLocaleString()}</p>
-                <p><strong>Telefon:</strong> ${phoneNumber}</p>
-                <a href="${urlApiWhats}" target="_blank">
-                <button class="whatsapp-button">Trimite reminder</button>
-                </a>
-            `;
-            col.appendChild(card);
-            row.appendChild(col);
-        });
+  
+      const row = document.createElement("div");
+      row.className = "row";
+      container.innerHTML = '';
+      
+      appointments.forEach(event => {
+          const card = document.createElement('div');
+          card.classList.add('appointment-card');
+  
+          const col = document.createElement("div");
+          col.className = "col-lg-4 col-md-6 col-sm-12 col-xs-12";
+          
+          
+          const phoneNumber = event.phone;
+          let message = `🔔 Reminder 🔔\nProgramare AMV Beauty Skin\nMâine, ${new Date(event.date).toLocaleString()}.\nVă așteptăm cu drag!\n 📍Maps: ${mapLinkGoogle}\n 📍Waze: ${mapLinkWaze}`;
+          const urlApiWhats = `https://api.whatsapp.com/send/?phone=4${phoneNumber}&text=${encodeURIComponent(message)}`;
+          card.innerHTML = `
+              <h3>${event.title}</h3>
+              <p><strong>Data:</strong> ${new Date(event.date).toLocaleString()}</p>
+              <p><strong>Telefon:</strong> ${phoneNumber}</p>
+              <a href="${urlApiWhats}" target="_blank">
+              <button class="whatsapp-button">Trimite reminder</button>
+              </a>
+          `;
+          col.appendChild(card);
+          row.appendChild(col);
+      });
         container.appendChild(row);
       } else {
         container.innerHTML = 'Nu sunt evenimente pentru ziua de mâine.';
       }
+    } catch (error) {
+      console.error("Failed to fetch calendar events:", error.message);
+    }
 }
 
 if (window.location.hash) {
@@ -114,3 +125,5 @@ if (window.location.hash) {
 } else {
   authenticate();
 }
+
+module.exports = { authenticate, handleAuthResponse, extractPhoneNumber, getAppointments };

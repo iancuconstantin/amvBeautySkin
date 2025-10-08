@@ -28,7 +28,7 @@ fetch(PROXY)
         blogContent.innerHTML = `${parsedData.content}`;
         
         let tagsContainer = document.getElementById("tags");
-        parsedData.labels.forEach(tag => {
+        parsedData.labels?.forEach(tag => {
             let tagLink = document.createElement("a");
             tagLink.textContent = tag;
             tagLink.href = `https://amvbeautyskin.blogspot.com/search/label/${tag}`;

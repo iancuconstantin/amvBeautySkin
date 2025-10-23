@@ -360,31 +360,47 @@
 
                             ><img src="images/home_01/layer.webp" alt="App Store"></div> -->
                             <div 
-                                class="tp-caption d-md-none d-sm-none d-xs-none d-lg-block cusLayer hero-image-wrapper"
-                                data-type="image"
-                                data-x="right"
-                                data-y="bottom"
-                                data-hoffset="['-320','-320','0','0']"
-                                data-voffset="['-170','-146','0','0']"
-                                data-width="['auto']"
-                                data-height="['auto']"
-                                data-visibility="['on','on','off','off']"
+                              class="tp-caption d-md-none d-sm-none d-xs-none d-lg-block cusLayer hero-image-wrapper"
+                              data-type="image"
+                              data-x="right"
+                              data-y="bottom"
+                              data-hoffset="['-320','-320','0','0']"
+                              data-voffset="['-170','-146','0','0']"
+                              data-width="['auto']"
+                              data-height="['auto']"
+                              data-visibility="['on','on','off','off']"
+                              data-frames='[
+                                {
+                                  "delay":0,
+                                  "speed":0,
+                                  "frame":"0",
+                                  "from":"opacity:1;",
+                                  "to":"opacity:1;"
+                                },
+                                {
+                                  "delay":"wait",
+                                  "speed":300,
+                                  "frame":"999",
+                                  "to":"opacity:0;",
+                                  "ease":"power3.inOut"
+                                }
+                              ]'
                             >
-                            <picture>
+                              <picture>
                                 <source srcset="images/home_01/layer.webp" type="image/webp">
                                 <img 
-                                src="images/home_01/layer.webp" 
-                                alt="App Store" 
-                                width="600" 
-                                height="400"
-                                loading="eager"
-                                decoding="async"
+                                  src="images/home_01/layer.png" 
+                                  alt="App Store"
+                                  width="600"
+                                  height="400"
+                                  loading="eager"
+                                  decoding="async"
                                 >
-                            </picture>
-
-                            <!-- overlay-ul care se va estompa după 2.4s -->
-                            <div class="hero-image-overlay"></div>
+                              </picture>
+                            
+                              <div class="hero-image-overlay"></div>
                             </div>
+
 
                             <div class="tp-caption d-md-none d-sm-none d-xs-none"
                                 data-frames='[{"delay":2800,"speed":800,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'

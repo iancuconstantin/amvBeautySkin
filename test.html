@@ -54,9 +54,6 @@
         <!-- Favicon Icon -->
         <link rel="icon"  type="image/png" href="images/favicon.png">
         <!-- Favicon Icon -->
-
-        <link rel="preload" as="image" href="images/home_01/layer.webp">
-
         
         <script type="application/ld+json">
             {
@@ -102,29 +99,6 @@
               ] 
             }
         </script>
-        <style>
-            .hero-image-wrapper {
-            position: relative;
-            display: inline-block;
-            }
-
-            .hero-image-overlay {
-            position: absolute;
-            inset: 0;
-            background: #fff; /* sau culoarea fundalului secțiunii */
-            opacity: 1;
-            animation: heroReveal 0.8s ease-in-out 2.4s forwards;
-            pointer-events: none;
-            }
-
-            @keyframes heroReveal {
-            to {
-                opacity: 0;
-                visibility: hidden;
-            }
-            }
-
-        </style>
     </head>
     <body>
         <!-- Google Tag Manager (noscript) -->
@@ -344,7 +318,7 @@
                                 data-visibility="['on', 'on', 'off', 'off']"
 
                                 ><div class="round_anim"></div></div>
-                            <!-- <div class="tp-caption d-md-none d-sm-none d-xs-none d-lg-block cusLayer"
+                            <div class="tp-caption d-md-none d-sm-none d-xs-none d-lg-block cusLayer"
                                 data-frames='[{"delay":2400,"speed":700,"frame":"0","from":"y:50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},
                                         {"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"power3.inOut"}]'
 
@@ -358,50 +332,7 @@
                                 
                                 data-visibility="['on', 'on', 'off', 'off']"
 
-                            ><img src="images/home_01/layer.webp" alt="App Store"></div> -->
-                            <div 
-                              class="tp-caption d-md-none d-sm-none d-xs-none d-lg-block cusLayer hero-image-wrapper"
-                              data-type="image"
-                              data-x="right"
-                              data-y="bottom"
-                              data-hoffset="['-320','-320','0','0']"
-                              data-voffset="['-170','-146','0','0']"
-                              data-width="['auto']"
-                              data-height="['auto']"
-                              data-visibility="['on','on','off','off']"
-                              data-frames='[
-                                {
-                                  "delay":0,
-                                  "speed":0,
-                                  "frame":"0",
-                                  "from":"opacity:1;",
-                                  "to":"opacity:1;"
-                                },
-                                {
-                                  "delay":"wait",
-                                  "speed":300,
-                                  "frame":"999",
-                                  "to":"opacity:0;",
-                                  "ease":"power3.inOut"
-                                }
-                              ]'
-                            >
-                              <picture>
-                                <source srcset="images/home_01/layer.webp" type="image/webp">
-                                <img 
-                                  src="images/home_01/layer.png" 
-                                  alt="App Store"
-                                  width="600"
-                                  height="400"
-                                  loading="eager"
-                                  decoding="async"
-                                >
-                              </picture>
-                            
-                              <div class="hero-image-overlay"></div>
-                            </div>
-
-
+                            ><img src="images/home_01/layer.webp" alt="App Store"></div>
                             <div class="tp-caption d-md-none d-sm-none d-xs-none"
                                 data-frames='[{"delay":2800,"speed":800,"frame":"0","from":"x:-50px;opacity:0;","to":"o:1;","ease":"power3.inOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"power3.inOut"}]'
 

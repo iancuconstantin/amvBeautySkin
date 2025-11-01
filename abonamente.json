@@ -106,6 +106,22 @@
         "sesiuni": [
             { "nume": "Sesiunea 1", "link": "https://app.minup.io/book/programari/service/53007" }
         ]
-    }
+    },
+    "PACHET_PERSONALIZAT_ABDOMEN_SCULPTAT": {
+    "nume": "PACHET PERSONALIZAT - ABDOMEN SCULPTAT",
+    "desc" : "Reducerea grasimii de pe abdomen, subtierea taliei, tonifiere si fermitate",
+    "sesiuni": [
+      { "nume": "Sesiunea 1", "link": "https://app.minup.io/book/programari/service/53032" },
+      { "nume": "Sesiunea 2", "link": "https://app.minup.io/book/programari/service/53033" },
+      { "nume": "Sesiunea 3", "link": "https://app.minup.io/book/programari/service/53034" },
+      { "nume": "Sesiunea 4", "link": "https://app.minup.io/book/programari/service/53035" },
+      { "nume": "Sesiunea 5", "link": "https://app.minup.io/book/programari/service/53036" },
+      { "nume": "Sesiunea 6", "link": "https://app.minup.io/book/programari/service/53038" },
+      { "nume": "Sesiunea 7", "link": "https://app.minup.io/book/programari/service/53039" },
+      { "nume": "Sesiunea 8", "link": "https://app.minup.io/book/programari/service/53040" },
+      { "nume": "Sesiunea 9", "link": "https://app.minup.io/book/programari/service/53041" },
+      { "nume": "Sesiunea 10", "link": "https://app.minup.io/book/programari/service/53042" }
+    ]
+  }
   }
   

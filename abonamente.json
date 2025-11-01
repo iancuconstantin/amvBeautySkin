@@ -1,0 +1,111 @@
+{
+    "AMV_Beauty_Skin_PRO": {
+      "nume": "AMV Beauty Skin PRO",
+      "desc" : "Program intensiv de slăbire, fermitate și detox in 4 săptămâni.",
+      "sesiuni": [
+        { "nume": "Sesiunea 1", "link": "https://app.minup.io/book/programari/service/52952" },
+        { "nume": "Sesiunea 2", "link": "https://app.minup.io/book/programari/service/52953" },
+        { "nume": "Sesiunea 3", "link": "https://app.minup.io/book/programari/service/52954" },
+        { "nume": "Sesiunea 4", "link": "https://app.minup.io/book/programari/service/52955" },
+        { "nume": "Sesiunea 5", "link": "https://app.minup.io/book/programari/service/52956" },
+        { "nume": "Sesiunea 6", "link": "https://app.minup.io/book/programari/service/52957" },
+        { "nume": "Sesiunea 7", "link": "https://app.minup.io/book/programari/service/52958" },
+        { "nume": "Sesiunea 8", "link": "https://app.minup.io/book/programari/service/52959" },
+        { "nume": "Sesiunea 9", "link": "https://app.minup.io/book/programari/service/52960" },
+        { "nume": "Sesiunea 10", "link": "https://app.minup.io/book/programari/service/52961" }
+      ]
+    },
+    "AMV_CONTOUR_FUSION": {
+      "nume": "AMV CONTOUR FUSION",
+      "desc" : "Contur perfect, terapie combinată, program rapid în trei săptămâni!",
+      "sesiuni": [
+        { "nume": "Sesiunea 1", "link": "https://app.minup.io/book/programari/service/52962" },
+        { "nume": "Sesiunea 2", "link": "https://app.minup.io/book/programari/service/52963" },
+        { "nume": "Sesiunea 3", "link": "https://app.minup.io/book/programari/service/52964" },
+        { "nume": "Sesiunea 4", "link": "https://app.minup.io/book/programari/service/52965" },
+        { "nume": "Sesiunea 5", "link": "https://app.minup.io/book/programari/service/52966" },
+        { "nume": "Sesiunea 6", "link": "https://app.minup.io/book/programari/service/52967" }
+      ]
+    },
+    "SHAPE_LIFT": {
+      "nume": "SHAPE & LIFT",
+      "desc" : "Fermitate și lifting al pielii - program de 4 săptămâni.",
+      "sesiuni": [
+        { "nume": "Sesiunea 1", "link": "https://app.minup.io/book/programari/service/52968" },
+        { "nume": "Sesiunea 2", "link": "https://app.minup.io/book/programari/service/52969" },
+        { "nume": "Sesiunea 3", "link": "https://app.minup.io/book/programari/service/52970" },
+        { "nume": "Sesiunea 4", "link": "https://app.minup.io/book/programari/service/52971" },
+        { "nume": "Sesiunea 5", "link": "https://app.minup.io/book/programari/service/52972" },
+        { "nume": "Sesiunea 6", "link": "https://app.minup.io/book/programari/service/52973" }
+      ]
+    },
+    "BODY_RESET_PROTOCOL": {
+      "nume": "BODY RESET PROTOCOL",
+      "desc" : "Transformare în profunzime - program de 8 săptămâni.",
+      "sesiuni": [
+        { "nume": "Sesiunea 1", "link": "https://app.minup.io/book/programari/service/52974" },
+        { "nume": "Sesiunea 2", "link": "https://app.minup.io/book/programari/service/52975" },
+        { "nume": "Sesiunea 3", "link": "https://app.minup.io/book/programari/service/52976" },
+        { "nume": "Sesiunea 4", "link": "https://app.minup.io/book/programari/service/52977" },
+        { "nume": "Sesiunea 5", "link": "https://app.minup.io/book/programari/service/52978" },
+        { "nume": "Sesiunea 6", "link": "https://app.minup.io/book/programari/service/52979" },
+        { "nume": "Sesiunea 7", "link": "https://app.minup.io/book/programari/service/52980" },
+        { "nume": "Sesiunea 8", "link": "https://app.minup.io/book/programari/service/52981" },
+        { "nume": "Sesiunea 9", "link": "https://app.minup.io/book/programari/service/52982" }
+      ]
+    },
+    "BODY_RESET_PROTOCOL_LIGHT": {
+      "nume": "BODY RESET PROTOCOL - LIGHT",
+      "desc" : "Transformare completă cu terapie alternată, slăbire ,fermitate și detox - program de 4 săptămâni.",
+      "sesiuni": [
+        { "nume": "Sesiunea 1", "link": "https://app.minup.io/book/programari/service/52984" },
+        { "nume": "Sesiunea 2", "link": "https://app.minup.io/book/programari/service/52985" },
+        { "nume": "Sesiunea 3", "link": "https://app.minup.io/book/programari/service/52986" },
+        { "nume": "Sesiunea 4", "link": "https://app.minup.io/book/programari/service/52987" },
+        { "nume": "Sesiunea 5", "link": "https://app.minup.io/book/programari/service/52988" },
+        { "nume": "Sesiunea 6", "link": "https://app.minup.io/book/programari/service/52989" },
+        { "nume": "Sesiunea 7", "link": "https://app.minup.io/book/programari/service/52990" },
+        { "nume": "Sesiunea 8", "link": "https://app.minup.io/book/programari/service/52991" }
+      ]
+    },
+    "AMV_Deep_Detox": {
+      "nume": "AMV Deep Detox",
+      "desc" : "Fizioterapie, detox, relaxare. Program intensiv de curățare și revitalizare în profunzime - 4 săptămâni.",
+      "sesiuni": [
+        { "nume": "Sesiunea 1", "link": "https://app.minup.io/book/programari/service/52992" },
+        { "nume": "Sesiunea 2", "link": "https://app.minup.io/book/programari/service/52993" },
+        { "nume": "Sesiunea 3", "link": "https://app.minup.io/book/programari/service/52994" },
+        { "nume": "Sesiunea 4", "link": "https://app.minup.io/book/programari/service/52995" },
+        { "nume": "Sesiunea 5", "link": "https://app.minup.io/book/programari/service/52996" },
+        { "nume": "Sesiunea 6", "link": "https://app.minup.io/book/programari/service/52997" },
+        { "nume": "Sesiunea 7", "link": "https://app.minup.io/book/programari/service/52998" },
+        { "nume": "Sesiunea 8", "link": "https://app.minup.io/book/programari/service/52999" },
+        { "nume": "Sesiunea 9", "link": "https://app.minup.io/book/programari/service/53000" },
+        { "nume": "Sesiunea 10", "link": "https://app.minup.io/book/programari/service/53001" }
+      ]
+    },
+    "AMV_Miniface_Refine": {
+      "nume": "AMV Miniface Refine",
+      "desc" : "VARIANTĂ STANDARD : Redefinire contur facial și subțiere bărbie.",
+      "sesiuni": [
+        { "nume": "Sesiunea 1", "link": "https://app.minup.io/book/programari/service/53002" },
+        { "nume": "Sesiunea 2", "link": "https://app.minup.io/book/programari/service/53003" },
+        { "nume": "Sesiunea 3", "link": "https://app.minup.io/book/programari/service/53004" },
+        { "nume": "Sesiunea 4", "link": "https://app.minup.io/book/programari/service/53005" },
+        { "nume": "Sesiunea 5", "link": "https://app.minup.io/book/programari/service/53006" },
+        { "nume": "Sesiunea 6", "link": "https://app.minup.io/book/programari/service/53008" },
+        { "nume": "Sesiunea 7", "link": "https://app.minup.io/book/programari/service/53009" },
+        { "nume": "Sesiunea 8", "link": "https://app.minup.io/book/programari/service/53010" },
+        { "nume": "Sesiunea 9", "link": "https://app.minup.io/book/programari/service/53011" },
+        { "nume": "Sesiunea 10", "link": "https://app.minup.io/book/programari/service/53012" }
+      ]
+    },
+    "AMV_Miniface_Refine_PREMIUM": {
+        "nume": "AMV MINIFACE REFINE - PREMIUM",
+        "desc" : "PREMIUM - Efect WOW - o singură ședință",
+        "sesiuni": [
+            { "nume": "Sesiunea 1", "link": "https://app.minup.io/book/programari/service/53007" }
+        ]
+    }
+  }
+  

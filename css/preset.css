@@ -126,6 +126,12 @@ input[type="number"]::-webkit-inner-spin-button {
     background: #f7a392;
     color: #FFF;
 }
+
+.mo_btn_second.visited {
+    background-color: #6c757d;
+    color: #fff;
+  }
+
 .mo_btn i{
     position: absolute;
     left: 7px;

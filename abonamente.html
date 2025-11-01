@@ -13,7 +13,7 @@
             })(window,document,'script','dataLayer','GTM-WJWT77SG');
         </script>
         <!-- End Google Tag Manager -->
-        <title>AMV Beauty Skin - Contact</title>
+        <title>AMV Beauty Skin - Abonament</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
@@ -180,8 +180,8 @@
         
         <!-- End:: Google Maps Section -->
 
-        <!-- Begin:: Contact Form Section -->
-        <section class="contactSection">
+        <!-- Begin:: Title Section -->
+        <section class="titleSection">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-10 offset-lg-1">
@@ -196,7 +196,7 @@
                 </div>
             </div>
         </section>
-        <!-- End:: Contact Form Section -->
+        <!-- End:: Title Section -->
 
 
         <!-- Begin:: Appointments Section -->
@@ -204,7 +204,7 @@
             <div class="layer_img l_01 move_anim">
                 <img src="images/bg/12.png" alt="svg">
             </div>
-            <div id="sesiuni-container"></div>
+            <div id="sesiuni-container" ></div>
             
             <div class="layer_img l_02 move_anim_two">
                 <img src="images/bg/11.png" alt="icon" loading="lazy">
@@ -390,14 +390,14 @@
                 divContainer.className = "container";
 
                 divContainer.innerHTML = `
-                <div class="row">
+                <div class="session">
                     <div class="col-lg-10 offset-lg-1">
                     <div class="package_item pl_area">
                         <img src="images/home_01/p1.jpg" alt="icon">
-                        <h5>
+                        <h5 class="d-flex flex-column">
                         <a href="javascript:void(0);">${abonament.nume} - SESIUNEA ${index + 1}</a>
                         <span class="piborder"></span>
-                        <div>
+                        <div class="d-flex">
                             <div class="text-center">
                             <a href="${sesiune.link}" 
                                 class="mo_btn mo_btn_second mob_lg mo_reverse track-visit"
@@ -412,7 +412,6 @@
                     </div>
                 </div>
                 `;
-
                 container.appendChild(divContainer);
             });
 

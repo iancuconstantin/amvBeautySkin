@@ -6,11 +6,10 @@ async function loadData() {
   try {
     const response = await fetch(PROXY);
     const data = await response.json();
-    const parsedData = JSON.parse(data.contents);
     const container = document.getElementById('postsList');
     const loader = document.getElementById('loader');
-    if (parsedData.items && parsedData.items.length > 0) {
-      parsedData.items.forEach((item) => {
+    if (data.items && data.items.length > 0) {
+      data.items.forEach((item) => {
         const formattedDate = formatDate(item.published);
         const articleDiv = document.createElement('div');
         articleDiv.classList.add('col-lg-4', 'col-md-6', 'blog-post', 'hidden');

@@ -1,6 +1,4 @@
-const API_KEY = "AIzaSyBf0M-4i1jS-BBu5D2lG4yQAHenSmawlVA";
-const URL = `https://www.googleapis.com/blogger/v3/blogs/6407374995812932765/posts?key=${API_KEY}`;
-const PROXY = "https://api.allorigins.win/get?url=" + encodeURIComponent(URL);
+const PROXY = "https://blogger-proxy.amvbeautyskin.workers.dev/";
 const loader = document.getElementById("loader");
 const container = document.getElementById("postsList");
 

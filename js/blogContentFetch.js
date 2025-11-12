@@ -1,7 +1,5 @@
-const API_KEY = "AIzaSyBf0M-4i1jS-BBu5D2lG4yQAHenSmawlVA";
 const POSTID = localStorage.getItem('selectedArticleId');
-const URL = `https://www.googleapis.com/blogger/v3/blogs/6407374995812932765/posts/${POSTID}?key=${API_KEY}`;
-const PROXY = "https://api.allorigins.win/get?url=" + encodeURIComponent(URL);
+const PROXY = `https://blogger-content-proxy.amvbeautyskin.workers.dev?postId=${POSTID}`;
 
 
 const formatDate = (dateString) => {
@@ -13,22 +11,21 @@ const formatDate = (dateString) => {
 fetch(PROXY)
     .then(response => response.json())
     .then(data => {
-        const parsedData = JSON.parse(data.contents);
         const pageTitle = document.getElementById("banner-title")
-        pageTitle.innerHTML = `${parsedData.title}`;
+        pageTitle.innerHTML = `${data.title}`;
 
         let subTitle = document.getElementById("subTitle");
-        subTitle.innerHTML = parsedData.title;
+        subTitle.innerHTML = data.title;
 
         let datePost = document.getElementById("bpdate");
-        const formattedDate = formatDate(parsedData.published);
+        const formattedDate = formatDate(data.published);
         datePost.innerText = formattedDate;
 
         let blogContent = document.getElementsByClassName("sic_the_content")[0];
-        blogContent.innerHTML = `${parsedData.content}`;
+        blogContent.innerHTML = `${data.content}`;
         
         let tagsContainer = document.getElementById("tags");
-        parsedData.labels?.forEach(tag => {
+        data.labels?.forEach(tag => {
             let tagLink = document.createElement("a");
             tagLink.textContent = tag;
             tagLink.href = `https://amvbeautyskin.blogspot.com/search/label/${tag}`;
@@ -37,7 +34,7 @@ fetch(PROXY)
             tagsContainer.appendChild(document.createElement("br"));
         });
         addBlockquoteClassAndWrapContent();
-        updateMetaTags(parsedData);
+        updateMetaTags(data);
     })
     .catch(error => {
         let subTitle = document.getElementById("subTitle");

@@ -363,7 +363,7 @@
                     easing: 'swing',
                     step: function() {
                         var num = Math.ceil(this.Counter).toString();
-                        $('.counter', $this).html(num);
+                        $('.counter', $this).html(num)
                     }
                 });
             });
@@ -407,6 +407,39 @@
         swipe: true,
         showTitle: false,
         controls: true
+    });
+
+    const thumbs = document.querySelectorAll('.instagram-thumb');
+    const popup = document.getElementById('popup');
+    const popupImg = document.getElementById('popup-img');
+    const popupClose = document.getElementById('popup-close');
+
+    thumbs.forEach(thumb => {
+    thumb.addEventListener('mouseenter', () => {
+        thumb.style.transform = 'rotate(2deg) scale(1.1)';
+        thumb.style.transition = 'transform 0.3s ease';
+        thumb.style.cursor = 'pointer';
+    });
+    thumb.addEventListener('mouseleave', () => {
+        thumb.style.transform = 'rotate(0deg) scale(1)';
+    });
+    });
+
+    thumbs.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+            popup.style.display = 'flex';
+            popupImg.src = thumb.src;
+        });
+    });
+
+    
+    popupClose.addEventListener('click', () => {
+        popup.style.display = 'none';
+    });
+
+    
+    popup.addEventListener('click', (e) => {
+        if(e.target === popup) popup.style.display = 'none';
     });
     
     /*--------------------------------------------------------

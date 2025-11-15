@@ -60,7 +60,7 @@
               "@context": "https://schema.org",
               "@type": "BeautySalon",
               "name": "AMV BEAUTY SKIN",
-              "image": "https://amv-beautyskin.ro/images/logo.png",
+              "image": "https://amv-beautyskin.ro/images/logo.webp",
               "@id": "",
               "url": "https://www.amv-beautyskin.ro",
               "telephone": "0727822852",
@@ -124,7 +124,11 @@
                     <div class="col-lg-2 cusLogo">
                         <div class="logo">
                             <a href="/">
-                                <img src="images/logo.png" alt="Makeover"/>
+                                <!-- <img src="images/logo.webp" alt="Makeover"/> -->
+                                <picture>
+                                    <source srcset="images/logo.webp" type="image/webp">
+                                    <img src="images/logo.png" alt="makeover" width="auto" height="auto">
+                                </picture>
                             </a>
                         </div>
                     </div>
@@ -171,7 +175,13 @@
                 <div class="center_align">
                     <div class="about_widget_area">
                         <div class="wd_logo">
-                            <a href="/"><img src="images/logo.png" alt="makeover"/></a>
+                            <a href="/">
+                                <!-- <img src="images/logo.webp" alt="makeover"/> -->
+                                <picture>
+                                    <source srcset="images/logo.webp" type="image/webp">
+                                    <img src="images/logo.png" alt="makeover" width="auto" height="auto">
+                                </picture>
+                            </a>
                         </div>
                         <h3 class="widget_title">Obiectivele noastre</h3>
                             <ul>
@@ -393,7 +403,11 @@
                                 <img src="images/bg/5.png" alt="svg image"/>
                             </div>
                             <div class="abImg float-right">
-                                <img src="images/home_01/1.jpg" alt="Makeover"/>
+                                <!-- <img src="images/home_01/1.webp" alt="Makeover"/> -->
+                                <picture>
+                                    <source srcset="images/home_01/1.webp" type="image/webp">
+                                    <img src="images/home_01/1.webp" alt="..." width="526" height="526">
+                                </picture>
                             </div>
                             <div class="expCounter">
                                 <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
@@ -441,14 +455,100 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="clientSlider owl-carousel" id="secondCarousel">
-                            <a href="javascript:void(0);"><img class="hover" src="images/client_logo/1.png" loading="lazy" alt="ettre belle image"/><img class="normal" src="images/client_logo/1.png" alt="brand logo"/></a>
-                            <a href="javascript:void(0);"><img class="hover" src="images/client_logo/2.png" loading="lazy" alt="didier lab image"/><img class="normal" src="images/client_logo/2.png" alt="brand logo"/></a>
-                            <a href="javascript:void(0);"><img class="hover" src="images/client_logo/3.webp" loading="lazy" alt="epilat pro image"/><img class="normal" src="images/client_logo/3.webp" alt="brand logo"/></a>
-                            <a href="javascript:void(0);"><img class="hover" src="images/client_logo/4.png" loading="lazy" alt="dermis image"/><img class="normal" src="images/client_logo/4.png" alt="brand logo"/></a>
-                            <a href="javascript:void(0);"><img class="hover" src="images/client_logo/5.png" loading="lazy" alt="ettre belle image"/><img class="normal" src="images/client_logo/5.png" alt="brand logo"/></a>
-                            <a href="javascript:void(0);"><img class="hover" src="images/client_logo/6.png" loading="lazy" alt="sothis image"/><img class="normal" src="images/client_logo/6.png" alt="brand logo"/></a>
-                            <a href="javascript:void(0);"><img class="hover" src="images/client_logo/7.png" loading="lazy" alt="dermetics image"/><img class="normal" src="images/client_logo/7.png" alt="brand logo"/></a>
-                            <a href="javascript:void(0);"><img class="hover" src="images/client_logo/8.png" loading="lazy" alt="complete beauty image"/><img class="normal" src="images/client_logo/8.png" alt="brand logo"/></a>
+                            <a href="javascript:void(0);">
+                                <picture>
+                                  <source srcset="images/client_logo/1.webp" type="image/webp">
+                                  <img class="hover" src="images/client_logo/1.png" alt="brand logo hover">
+                                </picture>
+                              
+                                <picture>
+                                  <source srcset="images/client_logo/1.webp" type="image/webp">
+                                  <img class="normal" src="images/client_logo/1.png" loading="lazy" alt="brand logo">
+                                </picture>
+                            </a>
+                            <a href="javascript:void(0);">
+                                <picture>
+                                  <source srcset="images/client_logo/2.webp" type="image/webp">
+                                  <img class="hover" src="images/client_logo/2.png" alt="brand logo hover">
+                                </picture>
+                              
+                                <picture>
+                                  <source srcset="images/client_logo/2.webp" type="image/webp">
+                                  <img class="normal" src="images/client_logo/2.png" loading="lazy" alt="brand logo">
+                                </picture>
+                            </a>
+                            <a href="javascript:void(0);">
+                                <picture>
+                                  <source srcset="images/client_logo/3.webp" type="image/webp">
+                                  <img class="hover" src="images/client_logo/3.webp" alt="brand logo hover">
+                                </picture>
+                              
+                                <picture>
+                                  <source srcset="images/client_logo/3.webp" type="image/webp">
+                                  <img class="normal" src="images/client_logo/3.webp" loading="lazy" alt="brand logo">
+                                </picture>
+                            </a>
+                              
+                            <a href="javascript:void(0);">
+                                <picture>
+                                  <source srcset="images/client_logo/4.webp" type="image/webp">
+                                  <img class="hover" src="images/client_logo/4.png" alt="brand logo hover">
+                                </picture>
+                              
+                                <picture>
+                                  <source srcset="images/client_logo/4.webp" type="image/webp">
+                                  <img class="normal" src="images/client_logo/4.png" loading="lazy" alt="brand logo">
+                                </picture>
+                            </a>
+                              
+                            <a href="javascript:void(0);">
+                                <picture>
+                                  <source srcset="images/client_logo/5.webp" type="image/webp">
+                                  <img class="hover" src="images/client_logo/5.png" alt="brand logo hover">
+                                </picture>
+                              
+                                <picture>
+                                  <source srcset="images/client_logo/5.webp" type="image/webp">
+                                  <img class="normal" src="images/client_logo/5.png" loading="lazy" alt="brand logo">
+                                </picture>
+                            </a>
+                              
+                            <a href="javascript:void(0);">
+                                <picture>
+                                  <source srcset="images/client_logo/6.webp" type="image/webp">
+                                  <img class="hover" src="images/client_logo/6.png" alt="brand logo hover">
+                                </picture>
+                              
+                                <picture>
+                                  <source srcset="images/client_logo/6.webp" type="image/webp">
+                                  <img class="normal" src="images/client_logo/6.png" loading="lazy" alt="brand logo">
+                                </picture>
+                            </a>
+                              
+                            <a href="javascript:void(0);">
+                                <picture>
+                                  <source srcset="images/client_logo/7.webp" type="image/webp">
+                                  <img class="hover" src="images/client_logo/7.png" alt="brand logo hover">
+                                </picture>
+                              
+                                <picture>
+                                  <source srcset="images/client_logo/7.webp" type="image/webp">
+                                  <img class="normal" src="images/client_logo/7.png" loading="lazy" alt="brand logo">
+                                </picture>
+                            </a>
+                              
+                            <a href="javascript:void(0);">
+                                <picture>
+                                  <source srcset="images/client_logo/8.webp" type="image/webp">
+                                  <img class="hover" src="images/client_logo/8.png" alt="brand logo hover">
+                                </picture>
+                              
+                                <picture>
+                                  <source srcset="images/client_logo/8.webp" type="image/webp">
+                                  <img class="normal" src="images/client_logo/8.png" loading="lazy" alt="brand logo">
+                                </picture>
+                            </a>
+                              
                         </div>
                     </div>
                 </div>
@@ -458,12 +558,65 @@
         
         <!-- Begin:: Instagram Section -->
         <div class="my_instagram">
-            <a href="images/instagram/1.jpg" data-rel="lightcase:myCollection:slideshow" class="popup_img"><img src="images/instagram/1.jpg" loading="lazy" alt="instagram"></a>
-            <a href="images/instagram/2.jpg" data-rel="lightcase:myCollection:slideshow" class="popup_img"><img src="images/instagram/2.jpg" loading="lazy" alt="instagram"></a>
-            <a href="images/instagram/3.jpg" data-rel="lightcase:myCollection:slideshow" class="popup_img"><img src="images/instagram/3.jpg" loading="lazy" alt="instagram"></a>
-            <a href="images/instagram/4.jpg" data-rel="lightcase:myCollection:slideshow" class="popup_img"><img src="images/instagram/4.jpg" loading="lazy" alt="instagram"></a>
-            <a href="images/instagram/5.jpg" data-rel="lightcase:myCollection:slideshow" class="popup_img"><img src="images/instagram/5.jpg" loading="lazy" alt="instagram"></a>
-            <a href="images/instagram/6.jpg" data-rel="lightcase:myCollection:slideshow" class="popup_img"><img src="images/instagram/6.jpg" loading="lazy" alt="instagram"></a>
+            <picture class="insta-picture">
+                <img class="instagram-thumb" src="images/instagram/1.webp" alt="instagram" />
+            </picture>
+            <!-- Pop-up container -->
+            <div id="popup" class="popup">
+                <span id="popup-close" class="popup-close">&times;</span>
+                <img id="popup-img" src="" alt="instagram">
+            </div>
+
+            <!-- Thumbnail -->
+            <picture class="insta-picture">
+                <img class="instagram-thumb" src="images/instagram/2.webp" alt="instagram" />
+            </picture>
+            <!-- Pop-up container -->
+            <div id="popup" class="popup">
+                <span id="popup-close" class="popup-close">&times;</span>
+                <img id="popup-img" src="" alt="instagram">
+            </div>
+
+            <!-- Thumbnail -->
+            <picture class="insta-picture">
+                <img class="instagram-thumb" src="images/instagram/3.webp" alt="instagram" />
+            </picture>
+            <!-- Pop-up container -->
+            <div id="popup" class="popup">
+                <span id="popup-close" class="popup-close">&times;</span>
+                <img id="popup-img" src="" alt="instagram">
+            </div>
+
+            <!-- Thumbnail -->
+            <picture class="insta-picture">
+                <img class="instagram-thumb" src="images/instagram/4.webp" alt="instagram" />
+            </picture>
+            <!-- Pop-up container -->
+            <div id="popup" class="popup">
+                <span id="popup-close" class="popup-close">&times;</span>
+                <img id="popup-img" src="" alt="instagram">
+            </div>
+
+            <!-- Thumbnail -->
+            <picture class="insta-picture">
+                <img class="instagram-thumb" src="images/instagram/5.webp" alt="instagram" />
+            </picture>
+            <!-- Pop-up container -->
+            <div id="popup" class="popup">
+                <span id="popup-close" class="popup-close">&times;</span>
+                <img id="popup-img" src="" alt="instagram">
+            </div>
+
+            <!-- Thumbnail -->
+            <picture class="insta-picture">
+                <img class="instagram-thumb" src="images/instagram/6.webp" alt="instagram" />
+            </picture>
+            <!-- Pop-up container -->
+            <div id="popup" class="popup">
+                <span id="popup-close" class="popup-close">&times;</span>
+                <img id="popup-img" src="" alt="instagram">
+            </div>
+
         </div>
         <!-- End:: Instagram Section -->
         
@@ -518,8 +671,10 @@
                                 <li><a href="cookies.html">Politica cookies</a></li>
                                 <li><a href="confidentialitate.html">Politica de Confidențialitate</a></li>
                                 <li><a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO" target="_blank">Soluționarea litigiilor</a></li>
-                                <li><a href="https://reclamatiisal.anpc.ro/" target="_blank"><img src="./images/anpc-sal.png" alt="sal image" width="150px"></a></li>
-                                <li><a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO" target="_blank"><img src="./images/anpc-sol.png" alt="sol image" width="150px"></a></li>
+                                <!-- <li><a href="https://reclamatiisal.anpc.ro/" target="_blank"><img src="./images/anpc-sal.webp" alt="sal image" width="150px"></a></li> -->
+                                <li><a href="https://reclamatiisal.anpc.ro/" target="_blank"><picture><source srcset="images/anpc-sal.webp" type="image/webp"><img src="images/anpc-sal.png" alt="sal image" width="150"></picture></a></li>
+                                <!-- <li><a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO" target="_blank"><img src="./images/anpc-sol.webp" alt="sol image" width="150px"></a></li> -->
+                                <li><a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO" target="_blank"><picture><source srcset="images/anpc-sal.webp"type="image/webp"><img src="images/anpc-sal.png" alt="sal image" width="150"></picture></a></li>
                             </ul>
                         </aside>
                     </div>

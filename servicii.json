@@ -1,0 +1,405 @@
+{
+    "categories": [
+      {
+        "id": "estetica_faciala",
+        "name": "Estetica Faciala",
+        "image": "images/home_01/p1.jpg",
+        "branches": {
+          "branch1": [
+            {
+              "title": "Facial Analysis - A.I.",
+              "price": "150 Ron",
+              "description": "Analiză facială cu inteligență artificială pentru soluții personalizate de îngrijire a pielii."
+            },
+            {
+              "title": "Hydra Glow Skin",
+              "price": "350 Ron",
+              "description": "Revitalizează-ți pielea cu un efect de strălucire."
+            },
+            {
+              "title": "Stem Cell Therapy",
+              "price": "500 Ron",
+              "description": "Revitalizează-ți pielea la nivel celular."
+            },
+            {
+              "title": "Medical Beauty -Exosome Therapy",
+              "price": "800 Ron",
+              "description": "Terapie V-Tech, sistem avansat ultra intensiv cu PDRN, exozomi sintetici, polinucleotide, peptide și celule stem."
+            },
+            {
+              "title": "Carbon Peel LASER",
+              "price": "500 Ron",
+              "description": "Acțiune laser pentru curățare și revitalizare cu ajutorul carbonului."
+            },
+            {
+              "title": "Time Control _hifu",
+              "price": "900 Ron",
+              "description": "Lifting și fermitate cu tehnologia HIFU."
+            },
+            {
+              "title": "Eye Therapy _hifu",
+              "price": "500 Ron",
+              "description": "Terapie țintită pentru rejuvenarea zonei ochilor."
+            },
+            {
+              "title": "Hyaluronic Therapy",
+              "price": "400 Ron",
+              "description": "Hidratează și rejuvenează cu acid hialuronic."
+            },
+            {
+              "title": "Golden Skin Therapy",
+              "price": "450 Ron",
+              "description": "Oferă-i pielii tale o strălucire luxoasă de aur."
+            },
+            {
+              "title": "Time Control _RF",
+              "price": "450 Ron",
+              "description": "Tratament cu radiofrecvență pentru lifting și întărire."
+            }
+          ]
+          ,
+          "branch2": [
+            {
+              "title": "Mezoterapie Fraqctionata _RF",
+              "price": "750 Ron",
+              "description": "Mezoterapie fracționată cu radiofrecvență."
+            },
+            {
+              "title": "Dermapen Therapy _ten",
+              "price": "500 Ron",
+              "description": "Microneedling pentru rejuvenarea pielii faciale."
+            },
+            {
+              "title": "Dermapen Therapy _scalp",
+              "price": "250 Ron",
+              "description": "Microneedling pentru stimularea creșterii părului."
+            },
+            {
+              "title": "Mezoterapie RF_eyebrows",
+              "price": "250 Ron",
+              "description": "Mezoterapie RF pentru regenerarea sprâncenelor."
+            },
+            {
+              "title": "Purity Therapy",
+              "price": "250 Ron",
+              "description": "Purifică-ți pielea și redă-i strălucirea naturală."
+            },
+            {
+              "title": "Anti-acnee Therapy",
+              "price": "300 Ron",
+              "description": "Tratează acneea și previne apariția coșurilor."
+            },
+            {
+              "title": "Pure White Therapy",
+              "price": "300 Ron",
+              "description": "Obține un ton de piele mai luminos și uniform."
+            },
+            {
+              "title": "Naturel SPA Therapy",
+              "price": "150 Ron",
+              "description": "Terapie cu produse 100% bio, vegane, testate dermatologic , certificat - produs natural."
+            },
+            {
+              "title": "Sothys Therapy - desensibilizare",
+              "price": "300 Ron",
+              "description": "Terapie cu apă termală ce oferă hidratare și luminozitate 100% la prima aplicare."
+            },
+            {
+              "title": "Sothys Therapy - depigmentare",
+              "price": "425 Ron",
+              "description": "Soluție triplă: depigmentare sau tratarea petelor întunecate, hidratare și un ten uniform"
+            },
+            {
+              "title": "Energy Vitamins _RF",
+              "price": "450 Ron",
+              "description": "Încărcă-ți pielea cu vitamine care energizează."
+            }
+          ]          
+        }
+      },
+      {
+        "id": "estetica_corporala",
+        "name": "Estetica Corporala",
+        "image": "images/home_01/p2.jpg",
+        "branches": {
+          "branch1": [
+            {
+              "title": "Scoatere tatuaj",
+              "price": "500 Ron",
+              "description": "Elimină tatuajele în siguranță și fără durere."
+            },
+            {
+              "title": "Rejuvenare vaginala _hifu",
+              "price": "350 Ron",
+              "description": "Tratament HIFU pentru rejuvenarea zonei intime."
+            },
+            {
+              "title": "Slimming Booster Therapy _hifu",
+              "price": "500 Ron",
+              "description": "Reducere eficientă a grăsimii cu ajutorul tehnologiei HIFU."
+            },
+            {
+              "title": "Firming Therapy _RF",
+              "price": "250 Ron",
+              "description": "Tratament cu radiofrecvență pentru fermitatea pielii."
+            },
+            {
+              "title": "Presodrenaj Limfatic",
+              "price": "100 Ron",
+              "description": "Stimulează circulația și detoxifică organismul."
+            }
+          ],
+          "branch2": [
+            {
+              "title": "Lipolaser Therapy",
+              "price": "100 Ron",
+              "description": "Tratament pentru arderea grăsimilor și tonifierea corpului."
+            },
+            {
+              "title": "10 șed. Vacuum _RF (2 ori/sapt)",
+              "price": "750 Ron",
+              "description": "Tratament cu vacuum și radiofrecvență pentru remodelare corporală."
+            },
+            {
+              "title": "20 șed. Lipolaser + Vacuum _RF",
+              "price": "1500 Ron",
+              "description": "Combină Lipolaser și Vacuum _RF pentru reducerea grăsimilor."
+            },
+            {
+              "title": "Radiofrecvență fracționată - Full Body",
+              "price": "1200 Ron",
+              "description": "Tratament pentru fermitate, colagen și remodelare, aplicat pe zonele necesare ale corpului, în funcție de nevoi."
+            },
+            {
+              "title": "Radiofrecvență fracționată - 1 Zonă",
+              "price": "500 Ron",
+              "description": "Tratament localizat pentru fermitate, colagen și remodelare, aplicat pe o regiune specifică în funcție de necesități."
+            }
+          ]
+        }
+      },
+      {
+        "id": "epilare_definitiva",
+        "name": "Epilare Definitiva",
+        "image": "images/home_01/p3.jpg",
+        "branches": {
+          "branch1": [
+            {
+              "title": "Ep. laser facial",
+              "price": "150 Ron",
+              "description": "Tratament cu epilare laser pentru un ten neted și fără iritații."
+            },
+            {
+              "title": "Ep. laser mustata",
+              "price": "100 Ron",
+              "description": "Elimină părul nedorit de pe mustață cu tehnologia laser."
+            },
+            {
+              "title": "Ep. laser urechi",
+              "price": "100 Ron",
+              "description": "Îndepărtează eficient părul de pe urechi cu epilare laser."
+            },
+            {
+              "title": "Ep. laser axila",
+              "price": "125 Ron",
+              "description": "Tratament laser pentru epilarea rapidă și fără durere a axilelor."
+            },
+            {
+              "title": "Ep. laser brate",
+              "price": "155 Ron",
+              "description": "Elimină părul de pe brațe cu ajutorul epilării laser eficiente."
+            },
+            {
+              "title": "Ep. laser abdomen",
+              "price": "125 Ron",
+              "description": "Tratament laser pentru epilarea zonei abdominale."
+            },
+            {
+              "title": "Ep. laser inghinal",
+              "price": "175 Ron",
+              "description": "Elimină părul din zona inghinală prin epilare laser."
+            },
+            {
+              "title": "Ep. laser interfesier",
+              "price": "75 Ron",
+              "description": "Elimină părul nedorit din zona interfesieră prin epilare laser."
+            }
+          ],
+          "branch2": [
+            {
+              "title": "Ep. laser l. bikini",
+              "price": "155 Ron",
+              "description": "Elimină părul din zona liniei bikini cu epilare laser eficientă."
+            },
+            {
+              "title": "Ep. laser picior lung",
+              "price": "350 Ron",
+              "description": "Tratament laser pentru epilarea completă a picioarelor."
+            },
+            {
+              "title": "Ep. laser coapse",
+              "price": "275 Ron",
+              "description": "Tratament laser pentru epilarea coapselor."
+            },
+            {
+              "title": "Ep. laser gambe + degete",
+              "price": "240 Ron",
+              "description": "Epilați gambele și degetele cu ajutorul epilării laser precise."
+            },
+            {
+              "title": "Ep. laser fese",
+              "price": "75 Ron",
+              "description": "Îndepărtează părul din zona feselor cu epilare laser rapidă."
+            },
+            {
+              "title": "Ep. laser abdomen Bărbați",
+              "price": "300 Ron",
+              "description": "Tratament pentru epilarea zonei abdominale inferioare prin laser."
+            },
+            {
+              "title": "Ep. laser spate Bărbați",
+              "price": "300 Ron",
+              "description": "Epilați eficient spatele inferior cu epilare laser."
+            },
+            {
+              "title": "Full Body Ep. laser/sed",
+              "price": "1000 Ron",
+              "description": "Pachet complet de epilare laser pe mai multe zone, pentru rezultate maxime."
+            }
+          ]
+        }
+      },
+      {
+        "id": "cosmetica",
+        "name": "Cosmetica",
+        "image": "images/home_01/p4.jpg",
+        "branches": {
+          "branch1": [
+            {
+              "title": "Stilizare sprancene - pensat",
+              "price": "50 Ron",
+              "description": "Modelarea sprâncenelor prin pensat pentru un look perfect definit."
+            },
+            {
+              "title": "Stilizare faciala - p,v,m",
+              "price": "100 Ron",
+              "description": "Stilizare completă a feței, incluzând pensat, vopsit și machiaj sprâncene."
+            },
+            {
+              "title": "Vopsit gene/sprâncene",
+              "price": "35 Ron",
+              "description": "Colorare pentru un aspect definit și armonios."
+            },
+            {
+              "title": "Laminare gene/sprancene",
+              "price": "120 Ron",
+              "description": "Laminarea genelor și sprâncenelor pentru un efect natural și de lungă durată."
+            },
+            {
+              "title": "Epilat facial",
+              "price": "100 Ron",
+              "description": "Eliminarea părului de pe față cu epilare rapidă și eficientă."
+            },
+            {
+              "title": "Epilare mustata",
+              "price": "30 Ron",
+              "description": "Îndepărtare delicată a părului pentru un aspect neted."
+            },
+            {
+              "title": "Epilat urechi",
+              "price": "50 Ron",
+              "description": "Îndepărtarea părului din zona urechilor cu epilare delicată și precisă."
+            },
+            {
+              "title": "Epilat axila",
+              "price": "50 Ron",
+              "description": "Epilați eficient axilele pentru o piele netedă și fără iritații."
+            }
+          ],
+          "branch2": [
+            {
+              "title": "Epilat brate",
+              "price": "50 Ron",
+              "description": "Eliminarea părului de pe brațe cu epilare de calitate superioară."
+            },
+            {
+              "title": "Epilat picior lung",
+              "price": "75 Ron",
+              "description": "Eliminarea părului de pe piciorul întreg pentru o piele fină și netedă."
+            },
+            {
+              "title": "Epilat gambe",
+              "price": "50 Ron",
+              "description": "Epilați eficient zona gambei pentru o piele fină și catifelată."
+            },
+            {
+              "title": "Epilat inghinal + int. fes.",
+              "price": "100 Ron",
+              "description": "Epilați zona inghinală și interiorul feselor pentru un confort total."
+            },
+            {
+              "title": "Epilat fese",
+              "price": "50 Ron",
+              "description": "Îndepărtarea părului din zona feselor pentru o piele netedă și catifelată."
+            },
+            {
+              "title": "Epilat abdomen",
+              "price": "50 Ron",
+              "description": "Epilați zona abdomenului pentru un aspect curat și neted."
+            },
+            {
+              "title": "Epilat abdomen Bărbați",
+              "price": "100 Ron",
+              "description": "Eliminarea părului din zona abdomenului inferior pentru o piele netedă."
+            },
+            {
+              "title": "Epilat spate Bărbați",
+              "price": "100 Ron",
+              "description": "Îndepărtarea părului de pe spatele inferior pentru un confort sporit."
+            },
+            {
+              "title": "Cosmetica completa F.",
+              "price": "250 Ron",
+              "description": "Tratament complet de cosmetică pentru un look fresh și natural."
+            }
+          ]
+        }
+      },
+      {
+        "id": "makeup",
+        "name": "Make-up",
+        "image": "images/home_01/p5.jpg",
+        "branches": {
+          "branch1": [
+            {
+              "title": "BEAUTY make-up (zi/seara)",
+              "price": "250 Ron",
+              "description": "Machiaj pentru zi sau seară, perfect adaptat pentru orice ocazie."
+            },
+            {
+              "title": "BRIDE make-up",
+              "price": "300 Ron",
+              "description": "Machiaj special creat pentru mirese, pentru a evidenția frumusețea naturală în ziua cea mare."
+            }
+          ],
+          "branch2": [
+            {
+              "title": "LUXURY make-up",
+              "price": "350 Ron",
+              "description": "Machiaj de lux, cu produse premium pentru un look sofisticat și elegant."
+            },
+            {
+              "title": "AVANS make-up",
+              "price": "100 Ron",
+              "description": "Avans necesar pentru confirmarea programărilor de make-up."
+            }
+          ]
+        }
+      }
+      
+      
+      
+
+    ]
+}
+  

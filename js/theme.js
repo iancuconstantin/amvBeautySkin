@@ -414,33 +414,35 @@
     const popupImg = document.getElementById('popup-img');
     const popupClose = document.getElementById('popup-close');
 
-    thumbs.forEach(thumb => {
-    thumb.addEventListener('mouseenter', () => {
-        thumb.style.transform = 'rotate(2deg) scale(1.1)';
-        thumb.style.transition = 'transform 0.3s ease';
-        thumb.style.cursor = 'pointer';
-    });
-    thumb.addEventListener('mouseleave', () => {
-        thumb.style.transform = 'rotate(0deg) scale(1)';
-    });
-    });
-
-    thumbs.forEach(thumb => {
-        thumb.addEventListener('click', () => {
-            popup.style.display = 'flex';
-            popupImg.src = thumb.src;
+    if (thumbs.length > 0 && popup && popupImg && popupClose) {
+        thumbs.forEach(thumb => {
+        thumb.addEventListener('mouseenter', () => {
+            thumb.style.transform = 'rotate(2deg) scale(1.1)';
+            thumb.style.transition = 'transform 0.3s ease';
+            thumb.style.cursor = 'pointer';
         });
-    });
-
+        thumb.addEventListener('mouseleave', () => {
+            thumb.style.transform = 'rotate(0deg) scale(1)';
+        });
+        });
     
-    popupClose.addEventListener('click', () => {
-        popup.style.display = 'none';
-    });
-
+        thumbs.forEach(thumb => {
+            thumb.addEventListener('click', () => {
+                popup.style.display = 'flex';
+                popupImg.src = thumb.src;
+            });
+        });
     
-    popup.addEventListener('click', (e) => {
-        if(e.target === popup) popup.style.display = 'none';
-    });
+        
+        popupClose.addEventListener('click', () => {
+            popup.style.display = 'none';
+        });
+    
+        
+        popup.addEventListener('click', (e) => {
+            if(e.target === popup) popup.style.display = 'none';
+        });
+    }
     
     /*--------------------------------------------------------
     / 7. Skills

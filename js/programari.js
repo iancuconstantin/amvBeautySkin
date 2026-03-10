@@ -3,7 +3,7 @@ const API_KEY = 'AIzaSyBXadJIiwbZZtobzh42D-umDK3XScHM8ZE';
 const SCOPES = 'https://www.googleapis.com/auth/calendar.readonly';
 const calendarId = 'd1fa751e242a84ed93ddc2857e6bfb9b5e8bc3b0688a64012bb6c73b456f0949@group.calendar.google.com';
 let accessToken;
-const redirectUri = 'https://www.amv-beautyskin.ro/notificari';
+const redirectUri = 'https://amv-beautyskin.ro/notificari';
 const mapLinkGoogle = 'bit.ly/4cwW1oC';
 const mapLinkWaze = 'bit.ly/4cFAKcs';
 

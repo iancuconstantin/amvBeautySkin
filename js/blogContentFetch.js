@@ -11,6 +11,15 @@ const formatDate = (dateString) => {
 fetch(PROXY)
     .then(response => response.json())
     .then(data => {
+        //SET SEO
+        const articolCurent = {
+            slug: `${data.title}`,
+            url: `${data.url}`
+        };
+        console.log("verificare URL daca e cu www:", data.url);
+        const canonical = document.querySelector('link[rel="canonical"]');
+        canonical.setAttribute('href', articolCurent.url);
+        //SET CONTENT
         const pageTitle = document.getElementById("banner-title")
         pageTitle.innerHTML = `${data.title}`;
 

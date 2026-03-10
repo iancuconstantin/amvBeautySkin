@@ -15,7 +15,7 @@ async function loadData() {
         articleDiv.classList.add('col-lg-4', 'col-md-6', 'blog-post', 'hidden');
         articleDiv.innerHTML = `
           <div class="blog_item_03" id=${item.id};>
-            <img src="${extractFirstImage(item.content)}" alt="imagine generica"/>
+            <img src="${extractFirstImage(item.content)}" alt="imagine generica" style="max-width:370px; max-height:432px; object-fit:cover;"/>
             <div class="bp_content">
               <span>${formattedDate}</span>
               <h3><a href="articol.html" onclick="setArticleId(event, '${item.id}')">${item.title}</a></h3>

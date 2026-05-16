@@ -12,27 +12,12 @@ fetch(PROXY)
     .then(response => response.json())
     .then(data => {
         //SET SEO
-        const articolCurent = {
-            slug: `${data.title}`,
-            url: `${data.url}`
-        };
-        console.log("verificare URL daca e cu www:", data.url);
-        const canonical = document.querySelector('link[rel="canonical"]');
-        canonical.setAttribute('href', articolCurent.url);
-        //SET CONTENT
-        const pageTitle = document.getElementById("banner-title")
-        pageTitle.innerHTML = `${data.title}`;
-
         let subTitle = document.getElementById("subTitle");
         subTitle.innerHTML = data.title;
 
         let datePost = document.getElementById("bpdate");
         const formattedDate = formatDate(data.published);
-        datePost.innerText = formattedDate;
-
-        let blogContent = document.getElementsByClassName("sic_the_content")[0];
-        blogContent.innerHTML = `${data.content}`;
-        
+        datePost.innerText = formattedDate;  
         let tagsContainer = document.getElementById("tags");
         data.labels?.forEach(tag => {
             let tagLink = document.createElement("a");
@@ -43,7 +28,6 @@ fetch(PROXY)
             tagsContainer.appendChild(document.createElement("br"));
         });
         addBlockquoteClassAndWrapContent();
-        updateMetaTags(data);
     })
     .catch(error => {
         let subTitle = document.getElementById("subTitle");
@@ -64,37 +48,4 @@ fetch(PROXY)
             blockquote.innerHTML = '';
             blockquote.appendChild(p);
         });
-    }
-
-    function updateMetaTags(data) {
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-            metaDescription.setAttribute("content", data.title);
-        }
-
-        const ogTitle = document.querySelector('meta[property="og:title"]');
-        const ogDescription = document.querySelector('meta[property="og:description"]');
-        const ogUrl = document.querySelector('meta[property="og:url"]');
-        const articlePublishedTime = document.querySelector('meta[property="article:published_time"]');
-        const articleModifiedTime = document.querySelector('meta[property="article:modified_time"]');
-        const articleAuthor = document.querySelector('meta[property="article:author"]');
-    
-        if (ogTitle) {
-            ogTitle.setAttribute("content", data.title);
-        }
-        if (ogDescription) {
-            ogDescription.setAttribute("content", data.title);
-        }
-        if (ogUrl) {
-            ogUrl.setAttribute("content", window.location.href);
-        }
-        if (articlePublishedTime) {
-            articlePublishedTime.setAttribute("content", formatDate(data.published));
-        }
-        if (articleModifiedTime && data.updated) {
-            articleModifiedTime.setAttribute("content", formatDate(data.updated));
-        }
-        if (articleAuthor && data.author) {
-            articleAuthor.setAttribute("content", data.author.displayName);
-        }
     }

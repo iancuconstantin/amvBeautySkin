@@ -1,6 +1,17 @@
 const PROXY = "https://blogger-proxy.amvbeautyskin.workers.dev/";
 const loader = document.getElementById("loader");
 const container = document.getElementById("postsList");
+function slugify(text) {
+  return text
+    .toString()
+    .normalize("NFD")                 // separă diacriticele
+    .replace(/[\u0300-\u036f]/g, "")  // elimină diacriticele
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "")     // scoate caractere speciale
+    .trim()
+    .replace(/\s+/g, "-")             // spații -> -
+    .replace(/-+/g, "-");             // dubluri de - -> unul
+}
 
 async function loadData() {
   try {
@@ -10,16 +21,20 @@ async function loadData() {
     const loader = document.getElementById('loader');
     if (data.items && data.items.length > 0) {
       data.items.forEach((item) => {
+        const slug = slugify(item.title, {
+          lower: true,
+          strict: true
+        });
         const formattedDate = formatDate(item.published);
         const articleDiv = document.createElement('div');
         articleDiv.classList.add('col-lg-4', 'col-md-6', 'blog-post', 'hidden');
         articleDiv.innerHTML = `
-          <div class="blog_item_03" id=${item.id};>
+          <div class="blog_item_03" id=${item.id}>
             <img src="${extractFirstImage(item.content)}" alt="imagine generica" style="max-width:370px; max-height:432px; object-fit:cover;"/>
             <div class="bp_content">
               <span>${formattedDate}</span>
-              <h3><a href="articol.html" onclick="setArticleId(event, '${item.id}')">${item.title}</a></h3>
-              <a class="lr_more" href="articol.html" onclick="setArticleId(event, '${item.id}')">
+              <h3><a href="/blog/${slug}.html" onclick='setArticleId(event, "${item.id}")'>${item.title}</a></h3>
+              <a class="lr_more" href="/blog/${slug}.html")" onclick='setArticleId(event, "${item.id}")'>
                 Citeste articol
                 <svg width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
                   <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"></path>
@@ -59,9 +74,7 @@ const formatDate = (dateString) => {
 }
 
 const setArticleId = (event,articleId) => {
-    event.preventDefault();
     localStorage.setItem('selectedArticleId', articleId);
-    window.location.href = 'articol.html';
 }
 
 function extractFirstImage(content) {

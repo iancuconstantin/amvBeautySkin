@@ -85,7 +85,9 @@ async function getAppointments(calendarId = 'primary') {
             date: event.start.dateTime || event.start.date,
             phone: extractPhoneNumber(event.description),
         }));
-  
+      appointments.map(event=>{
+        console.log("verificare numar extras: ",extractPhoneNumber(event.description))
+      });
       const row = document.createElement("div");
       row.className = "row";
       container.innerHTML = '';
@@ -100,7 +102,7 @@ async function getAppointments(calendarId = 'primary') {
           
           const phoneNumber = event.phone;
           let message = `🔔 Reminder 🔔\nProgramare AMV Beauty Skin\nMâine, ${new Date(event.date).toLocaleString()}.\nVă așteptăm cu drag!\n 📍Maps: ${mapLinkGoogle}\n 📍Waze: ${mapLinkWaze}`;
-          const urlApiWhats = `https://api.whatsapp.com/send/?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
+          const urlApiWhats = `https://api.whatsapp.com/send/?phone=4${phoneNumber}&text=${encodeURIComponent(message)}`;
           card.innerHTML = `
               <h3>${event.title}</h3>
               <p><strong>Data:</strong> ${new Date(event.date).toLocaleString()}</p>

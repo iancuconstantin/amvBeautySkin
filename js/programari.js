@@ -27,7 +27,8 @@ function handleAuthResponse() {
 }
 
 function extractPhoneNumber(description) {
-  const regex = /:\s*([+O0o\d\s]{8,})/i;
+  // const regex = /:\s*([+O0o\d\s]{8,})/i;
+  const regex = /:\s*(\+\d{7,15}|0\d{7,15})/;
   const match = description?.match(regex);
   if (!match) return null;
   

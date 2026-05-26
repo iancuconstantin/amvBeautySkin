@@ -86,6 +86,7 @@ async function getAppointments(calendarId = 'primary') {
             phone: extractPhoneNumber(event.description),
         }));
       appointments.map(event=>{
+        console.log("verificare description: ", event.description);
         console.log("verificare numar extras: ",extractPhoneNumber(event.description))
       });
       const row = document.createElement("div");

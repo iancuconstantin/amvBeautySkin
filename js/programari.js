@@ -25,19 +25,37 @@ function handleAuthResponse() {
     console.log("⚠️ Autentificare eșuată!");
   }
 }
-
+ 
 function extractPhoneNumber(description) {
-  // const regex = /:\s*([+O0o\d\s]{8,})/i;
-  const regex = /:\s*(\+\d{7,15}|0\d{7,15})/;
+  const regex = /:\s*(\+?\d[\d\s]{7,15})/;
+
   const match = description?.match(regex);
+
   if (!match) return null;
-  
+
   const cleanedNumber = match[1]
-    .replace(/[Oo]/g, '0')
     .replace(/\s+/g, '');
 
   return cleanedNumber;
-}  
+}
+
+function normalizePhone(phoneNumber) {
+  // scoate spațiile
+  phoneNumber = phoneNumber.replace(/\s+/g, '');
+
+  // dacă începe cu +
+  if (phoneNumber.startsWith('+')) {
+    // WhatsApp nu vrea +
+    return phoneNumber.substring(1);
+  }
+
+  // dacă începe cu 0 => număr românesc
+  if (phoneNumber.startsWith('0')) {
+    return '40' + phoneNumber.substring(1);
+  }
+
+  return phoneNumber;
+}
 
 
 async function getAppointments(calendarId = 'primary') {
@@ -85,10 +103,6 @@ async function getAppointments(calendarId = 'primary') {
             date: event.start.dateTime || event.start.date,
             phone: extractPhoneNumber(event.description),
         }));
-      appointments.map(event=>{
-        console.log("verificare description: ", event.description);
-        console.log("verificare numar extras: ",extractPhoneNumber(event.description))
-      });
       const row = document.createElement("div");
       row.className = "row";
       container.innerHTML = '';
@@ -103,7 +117,7 @@ async function getAppointments(calendarId = 'primary') {
           
           const phoneNumber = event.phone;
           let message = `🔔 Reminder 🔔\nProgramare AMV Beauty Skin\nMâine, ${new Date(event.date).toLocaleString()}.\nVă așteptăm cu drag!\n 📍Maps: ${mapLinkGoogle}\n 📍Waze: ${mapLinkWaze}`;
-          const urlApiWhats = `https://api.whatsapp.com/send/?phone=4${phoneNumber}&text=${encodeURIComponent(message)}`;
+          const urlApiWhats = `https://api.whatsapp.com/send/?phone=${normalizePhone(phoneNumber)}&text=${encodeURIComponent(message)}`;
           card.innerHTML = `
               <h3>${event.title}</h3>
               <p><strong>Data:</strong> ${new Date(event.date).toLocaleString()}</p>

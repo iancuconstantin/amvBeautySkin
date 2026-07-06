@@ -36,7 +36,11 @@
         { "nume": "Sesiunea 3", "link": "https://app.minup.io/book/programari/service/52970" },
         { "nume": "Sesiunea 4", "link": "https://app.minup.io/book/programari/service/52971" },
         { "nume": "Sesiunea 5", "link": "https://app.minup.io/book/programari/service/52972" },
-        { "nume": "Sesiunea 6", "link": "https://app.minup.io/book/programari/service/52973" }
+        { "nume": "Sesiunea 6", "link": "https://app.minup.io/book/programari/service/52973" },
+        { "nume": "Sesiunea 7", "link": "https://app.minup.io/book/programari/service/78274" },
+        { "nume": "Sesiunea 8", "link": "https://app.minup.io/book/programari/service/78275" },
+        { "nume": "Sesiunea 9", "link": "https://app.minup.io/book/programari/service/78276" },
+        { "nume": "Sesiunea 10", "link": "https://app.minup.io/book/programari/service/78277"}
       ]
     },
     "BODY_RESET_PROTOCOL": {
